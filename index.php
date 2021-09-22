@@ -1,7 +1,7 @@
 <?php include "frontend/head.php"; ?>
 
 <!-- navbar -->
-<nav class="d-flex justify-content-between">
+<nav class="d-flex justify-content-between container mt-3">
     <div>
         <img src="./frontend/images/logo.svg" class="logo" alt="logo icon">
     </div>
@@ -10,11 +10,11 @@
             <li class="me-5">
                 <a href="#">Contact</a>
             </li>
-            <div class="container d-flex test">
-                <div>
-                    <img src="./frontend/images/icon-user.svg" class="user-icon" alt="">
+            <div class="d-flex align-items-center">
+                <div class="user-icon">
+                    <img src="./frontend/images/icon-user.svg" class="user" alt="">
                 </div>
-                <li>
+                <li class="ms-5 login">
                     <a href="#">Login</a>
                 </li>
             </div>

@@ -1,11 +1,6 @@
 // @import "./config/config";
-@use "./config/config" as *;
-
-// * {
-//   margin: 0;
-//   padding: 0;
-//   box-sizing: border-box;
-// }
+@use "./components" as *;
+@use "./components/navbar";
 
 body {
   font-size: 16px;

@@ -1,0 +1,26 @@
+@use "../components/" as *;
+
+.links-container {
+  li a {
+    // color: $white-clr;
+  }
+}
+
+.logo {
+  width: 150px;
+}
+
+.user-icon {
+  position: absolute;
+  background: $white-clr;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user {
+  width: 25px;
+}
