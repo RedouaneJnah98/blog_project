@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,CAAC,CAAC;EACE,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,UAAU,EAAE,UAAU;CAAG;;AAE7B,AAAA,IAAI,CAAC;EACD,SAAS,EAAE,IAAI;CAAG",
-    "sources": [
-        "../sass/main.sass"
-    ],
-    "names": [],
-    "file": "main.css"
-}
+{"version":3,"sourceRoot":"","sources":["../sass/config/_config.scss","../sass/main.scss"],"names":[],"mappings":"AACQ;ACQR;EACE;EACA,YDHQ;ECIR","file":"main.css"}

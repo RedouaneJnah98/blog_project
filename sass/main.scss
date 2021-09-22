@@ -1,0 +1,14 @@
+// @import "./config/config";
+@use "./config/config" as *;
+
+// * {
+//   margin: 0;
+//   padding: 0;
+//   box-sizing: border-box;
+// }
+
+body {
+  font-size: 16px;
+  background: $bcg-clr;
+  font-family: "Sora", sans-serif;
+}
