@@ -1,0 +1,23 @@
+@use "../components" as *;
+
+.home {
+  height: 100vh;
+  display: grid;
+  align-content: center;
+
+  .subtitle {
+    text-transform: uppercase;
+    font-size: 0.95rem;
+  }
+
+  .title {
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: capitalize;
+
+    .logo {
+      text-transform: uppercase;
+      color: $second-clr;
+    }
+  }
+}

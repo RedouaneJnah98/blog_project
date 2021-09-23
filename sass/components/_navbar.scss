@@ -1,26 +1,23 @@
 @use "../components/" as *;
 
+.logo-icon {
+  width: 150px;
+}
+
 .links-container {
   li a {
     // color: $white-clr;
   }
 }
 
-.logo {
-  width: 150px;
-}
-
 .user-icon {
   position: absolute;
   background: $white-clr;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2.2rem;
+  height: 2.2rem;
   border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.user {
-  width: 25px;
+  .user {
+    width: 25px;
+  }
 }

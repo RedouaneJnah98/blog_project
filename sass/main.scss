@@ -1,9 +1,9 @@
-// @import "./config/config";
-@use "./components" as *;
+@use "./components";
+@use "./components/home";
 @use "./components/navbar";
 
 body {
   font-size: 16px;
-  background: $bcg-clr;
+  background: components.$bcg-clr;
   font-family: "Sora", sans-serif;
 }

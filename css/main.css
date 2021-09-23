@@ -7,22 +7,37 @@ li {
   list-style: none;
 }
 
-.logo {
+.home {
+  height: 100vh;
+  display: grid;
+  align-content: center;
+}
+.home .subtitle {
+  text-transform: uppercase;
+  font-size: 0.95rem;
+}
+.home .title {
+  font-size: 3rem;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+.home .title .logo {
+  text-transform: uppercase;
+  color: #ff594f;
+}
+
+.logo-icon {
   width: 150px;
 }
 
 .user-icon {
   position: absolute;
   background: #fff;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2.2rem;
+  height: 2.2rem;
   border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
-
-.user {
+.user-icon .user {
   width: 25px;
 }
 
