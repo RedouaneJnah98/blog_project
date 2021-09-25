@@ -5,13 +5,17 @@
 }
 
 .header-card {
-  position: relative;
   max-width: 550px;
   width: 100%;
+  border-radius: $radius;
+}
+
+main {
+  position: relative;
 
   .card-img {
     width: 100%;
-    height: 350px;
+    height: 325px;
     object-fit: cover;
     border-radius: $radius;
   }
@@ -27,13 +31,14 @@
       color: $white-clr;
       font-weight: 600;
       font-size: 1.5rem;
-      letter-spacing: 1.2px;
+      letter-spacing: $spacing;
     }
 
     p,
     h6 {
       color: $p-clr;
       font-size: 0.9rem;
+      font-weight: normal;
     }
 
     .p-bar {
@@ -42,7 +47,37 @@
     }
 
     .author-name {
-      color: $white-clr;
+      font-weight: 700;
     }
   }
+}
+
+// Second card
+.vertical-card {
+  border-radius: $radius;
+  border: none;
+
+  p,
+  h6 {
+    font-size: 0.9rem;
+    color: $fourth-clr;
+
+    .author {
+      font-weight: 700;
+    }
+  }
+}
+
+.c-title {
+  color: $main-clr;
+  font-weight: 600;
+  font-size: 1.5rem;
+  letter-spacing: $spacing;
+}
+
+.vertical-img {
+  width: 100%;
+  height: 325px;
+  object-fit: cover;
+  border-radius: $radius 0 0 $radius;
 }

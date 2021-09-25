@@ -123,40 +123,73 @@ header nav .user-icon .user {
 }
 
 .header-card {
-  position: relative;
   max-width: 550px;
   width: 100%;
+  border-radius: 0.625rem;
 }
-.header-card .card-img {
+
+main {
+  position: relative;
+}
+main .card-img {
   width: 100%;
-  height: 350px;
+  height: 325px;
   object-fit: cover;
   border-radius: 0.625rem;
 }
-.header-card .infos-card {
+main .infos-card {
   position: absolute;
   bottom: 1.5rem;
   left: 1rem;
   right: 1rem;
   z-index: 3;
 }
-.header-card .infos-card h3 {
+main .infos-card h3 {
   color: #fff;
   font-weight: 600;
   font-size: 1.5rem;
   letter-spacing: 1.2px;
 }
-.header-card .infos-card p,
-.header-card .infos-card h6 {
+main .infos-card p,
+main .infos-card h6 {
   color: #e5e5e5;
   font-size: 0.9rem;
+  font-weight: normal;
 }
-.header-card .infos-card .p-bar {
+main .infos-card .p-bar {
   color: #fff;
   font-weight: 300;
 }
-.header-card .infos-card .author-name {
-  color: #fff;
+main .infos-card .author-name {
+  font-weight: 700;
+}
+
+.vertical-card {
+  border-radius: 0.625rem;
+  border: none;
+}
+.vertical-card p,
+.vertical-card h6 {
+  font-size: 0.9rem;
+  color: #616162;
+}
+.vertical-card p .author,
+.vertical-card h6 .author {
+  font-weight: 700;
+}
+
+.c-title {
+  color: #151443;
+  font-weight: 600;
+  font-size: 1.5rem;
+  letter-spacing: 1.2px;
+}
+
+.vertical-img {
+  width: 100%;
+  height: 325px;
+  object-fit: cover;
+  border-radius: 0.625rem 0 0 0.625rem;
 }
 
 body {
