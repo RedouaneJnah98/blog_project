@@ -4,7 +4,7 @@
 <header>
     <nav class="d-flex justify-content-between container mt-4">
         <div>
-            <img src="./frontend/images/logo.svg" class="logo-icon" alt="logo icon">
+            <img src="./images/logo.svg" class="logo-icon" alt="logo icon">
         </div>
         <div class="links-container">
             <ul class="d-flex ">
@@ -13,7 +13,7 @@
                 </li>
                 <div class="d-flex align-items-center">
                     <div class="user-icon d-flex justify-content-center align-items-center">
-                        <img src="./frontend/images/icon-user.svg" class="user" alt="">
+                        <img src="./images/icon-user.svg" class="user" alt="">
                     </div>
                     <li class="ms-5 login">
                         <a href="#">Login</a>
@@ -22,31 +22,30 @@
             </ul>
         </div>
     </nav>
-</header>
-<!-- end of navbar -->
+    <!-- end of navbar -->
 
-<!-- Home -->
+    <!-- Home -->
 
-<section class="home">
-    <div class="img-container">
-        <img src="./frontend/images/bcg-img.jpg" class="img" alt="">
-    </div>
-    <div class="test"></div>
-    <div class="hero-infos container">
-        <h4 class="hero-subtitle">read the latest articles</h4>
-        <h1 class="hero-title"><span class="logo">blog.ger</span> express your <br>opinion with us</h1>
-        <div class="mt-5">
-            <a href="#" class="scroll-btn">scroll down</a>
+    <section class="home">
+        <div class="img-container">
+            <img src="./images/bcg-img.jpg" class="img" alt="">
         </div>
-    </div>
-</section>
+        <div class="hero-infos container">
+            <h4 class="hero-subtitle">read the latest articles</h4>
+            <h1 class="hero-title"><span class="logo">blog.ger</span> express your <br>opinion with us</h1>
+            <div class="mt-5">
+                <a href="#" class="scroll-btn">scroll down</a>
+            </div>
+        </div>
+    </section>
+</header>
 
 <!-- End of Home -->
 
 <!-- Articles Section -->
 
-<section class="test">
-    <div class="container">
+<section class="latest-articles-section">
+    <div class="container title-container">
         <h1 class="title">the latest <br>articles</h1>
         <h5 class="subtitle">/ see the latest articles</h5>
 

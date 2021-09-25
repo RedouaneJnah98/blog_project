@@ -1,0 +1,48 @@
+@use "../components" as *;
+
+.latest-articles-section {
+  padding: 5rem 0;
+}
+
+.header-card {
+  position: relative;
+  max-width: 550px;
+  width: 100%;
+
+  .card-img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: $radius;
+  }
+
+  .infos-card {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1rem;
+    right: 1rem;
+    z-index: 3;
+
+    h3 {
+      color: $white-clr;
+      font-weight: 600;
+      font-size: 1.5rem;
+      letter-spacing: 1.2px;
+    }
+
+    p,
+    h6 {
+      color: $p-clr;
+      font-size: 0.9rem;
+    }
+
+    .p-bar {
+      color: $white-clr;
+      font-weight: 300;
+    }
+
+    .author-name {
+      color: $white-clr;
+    }
+  }
+}

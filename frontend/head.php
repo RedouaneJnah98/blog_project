@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/main.css">
     <!-- <link rel="stylesheet" href="test.css"> -->
 
-    <title>Document</title>
+    <title>Bloog.ger</title>
 </head>
 
 <body>
