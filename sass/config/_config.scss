@@ -61,3 +61,28 @@ li {
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 1;
 }
+
+// Footer
+footer {
+  padding: 1rem 0;
+  background: $main-clr;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    color: $white-clr;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .footer-logo {
+    width: 100px;
+  }
+}
+
+.hello {
+  color: blue;
+}
