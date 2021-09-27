@@ -7,6 +7,7 @@
                     <p>US Army investigators are offering a cash reward for information about the disappearance of a
                         soldier from
                         her base at Fort Hood, Texas.</p>
+                    <p class="c-footer">World</p>
                 </div>
             </div>
             <div class="card" style="width: 350px;">
@@ -16,15 +17,17 @@
                     <p>Fully vaccinated people are much less likely to die with Covid-19 than those who aren't, or have
                         had only one
                         dose ...</p>
+                    <p class="c-footer">Health</p>
                 </div>
             </div>
-            <div class="card c-item" style="width: 350px;">
+            <div class="card tt" style="width: 350px;">
                 <img src="./images/card-img-3.jpg" class="card-img-top" alt="card-img">
                 <div class="card-body">
                     <h4>Elfyn Evans loses further ground to leader Ogier in Greece</h4>
                     <p>Elfyn Evans lost further ground to World Rally Championship leader Sebastien Ogier, finishing
                         sixth in the
                         Acropolis Rally Greece</p>
+                    <p class="c-footer">Sport</p>
                 </div>
             </div>
 

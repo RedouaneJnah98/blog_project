@@ -1,5 +1,30 @@
 @use "../components" as *;
 
-.c-item {
+.card {
   border-radius: $radius;
+
+  img {
+    border-radius: $radius $radius 0 0;
+  }
+
+  h4 {
+    color: $main-clr;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    color: $fourth-clr;
+    font-weight: 300;
+    font-size: 0.85rem;
+  }
+
+  .c-footer {
+    margin-top: 1.5rem;
+    border-left: 2px solid $main-clr;
+    padding-left: 0.5rem;
+    color: $third-clr;
+    font-weight: bold;
+  }
 }
