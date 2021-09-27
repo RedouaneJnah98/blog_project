@@ -49,7 +49,11 @@
         <h1 class="title">the latest <br>articles</h1>
         <h5 class="subtitle">/ see the latest articles</h5>
 
-        <?php include_once "./frontend/cards.php"; ?>
+        <?php include_once "./frontend/features.php"; ?>
+
+        <div class="d-flex justify-content-between">
+            <?php include_once "./frontend/cards.php"; ?>
+        </div>
     </div>
 </section>
 

@@ -192,6 +192,10 @@ main .infos-card .author-name {
   border-radius: 0.625rem 0 0 0.625rem;
 }
 
+.c-item {
+  border-radius: 0.625rem;
+}
+
 body {
   font-size: 16px;
   background: #f8f8f8;
