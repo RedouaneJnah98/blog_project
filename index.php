@@ -51,9 +51,8 @@
 
         <?php include_once "./frontend/features.php"; ?>
 
-        <div class="d-flex justify-content-between">
-            <?php include_once "./frontend/cards.php"; ?>
-        </div>
+        <?php include_once "./frontend/cards.php"; ?>
+    </div>
     </div>
 </section>
 

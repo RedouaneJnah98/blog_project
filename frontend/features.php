@@ -18,7 +18,7 @@
         </main>
     </div>
 
-    <div class="card vertical-card" style="max-width: 550px; height:325px">
+    <div class="card vertical-card" style="max-width: 550px">
         <div class="row g-0 align-items-center">
             <div class="col-md-5">
                 <img src="./images/img-2.jpg" class="vertical-img" alt="astro image">
