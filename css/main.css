@@ -7,6 +7,11 @@ li {
   list-style: none;
 }
 
+button {
+  background: transparent;
+  border-color: transparent;
+}
+
 .title-container .title,
 .title-container .subtitle {
   font-weight: 700;
@@ -237,6 +242,49 @@ main .infos-card .author-name {
   padding-left: 0.5rem;
   color: #7968a9;
   font-weight: bold;
+}
+
+.login-img {
+  width: 50vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.form-infos {
+  max-width: 600px;
+  width: 100%;
+}
+.form-infos .black-logo {
+  width: 150px;
+}
+.form-infos .close-btn {
+  font-size: 35px;
+}
+.form-infos form {
+  margin-top: 3rem;
+}
+.form-infos form h1 {
+  font-size: 2rem;
+  color: #151443;
+  font-weight: 600;
+}
+.form-infos form label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #151443;
+}
+.form-infos form input {
+  margin-bottom: 1rem;
+  width: 500px;
+  height: 40px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  background: #f3f3f3;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: #7968a9;
 }
 
 body {

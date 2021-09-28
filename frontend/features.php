@@ -1,4 +1,4 @@
-<div class="d-flex justify-content-between flex-wrap my-5">
+<div class="d-flex justify-content-between flex-wrap my-5 gap-3">
     <div class="header-card">
         <main>
             <img src="./images/img-1.jpg" class="card-img" alt="tech-image">

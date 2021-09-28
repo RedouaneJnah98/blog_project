@@ -1,0 +1,50 @@
+@use "../components" as *;
+
+.login-img {
+  width: 50vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.form-infos {
+  max-width: 600px;
+  width: 100%;
+
+  .black-logo {
+    width: 150px;
+  }
+
+  .close-btn {
+    font-size: 35px;
+  }
+
+  form {
+    margin-top: 3rem;
+
+    h1 {
+      font-size: 2rem;
+      color: $main-clr;
+      font-weight: 600;
+    }
+
+    label {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: $main-clr;
+    }
+
+    input {
+      margin-bottom: 1rem;
+      width: 500px;
+      height: 40px;
+      border-radius: 5px;
+      outline: none;
+      border: none;
+      background: $input-bcg;
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+      font-weight: 300;
+      color: $third-clr;
+    }
+  }
+}

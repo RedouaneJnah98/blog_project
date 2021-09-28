@@ -9,6 +9,7 @@ $fourth-clr: #616162;
 $bcg-clr: #f8f8f8;
 $white-clr: #fff;
 $p-clr: #e5e5e5;
+$input-bcg: #f3f3f3;
 $radius: 0.625rem;
 $spacing: 1.2px;
 
@@ -19,6 +20,11 @@ a {
 
 li {
   list-style: none;
+}
+
+button {
+  background: transparent;
+  border-color: transparent;
 }
 
 // Titles in Home Page

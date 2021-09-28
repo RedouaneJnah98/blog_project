@@ -4,6 +4,9 @@
 @use "./components/features";
 @use "./components/cards";
 
+// Admin
+@use "./admin/login";
+
 body {
   font-size: 16px;
   background: components.$bcg-clr;
