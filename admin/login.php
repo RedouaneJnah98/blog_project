@@ -35,14 +35,14 @@
             <form action="" method="post">
                 <h1 class="mb-4">Create an account</h1>
 
-                <div class="d-flex">
+                <div class="d-flex justify-content-between">
                     <div class="d-grid">
                         <label for="firstname">Firstname</label>
-                        <input type="text" name="firstname" placeholder="Firstname">
+                        <input type="text" name="firstname" class="input-name" placeholder="Firstname">
                     </div>
                     <div class="d-grid">
                         <label for="lastname">Lastname</label>
-                        <input type="text" name="lastname" placeholder="lastname">
+                        <input type="text" name="lastname" class="input-name" placeholder="lastname">
                     </div>
                 </div>
                 <div class="d-grid">
@@ -59,10 +59,13 @@
                 </div>
                 <div class="d-grid">
                     <label for="country">Country or Region of Residence</label>
-                    <select name="country" id="country"></select>
+                    <select name="country" id="country">
+                        <option value="select-country">Select Country</option>
+                    </select>
                 </div>
 
                 <button type="submit" class="signup-btn">Sign up </button>
+                <p class="mt-2">Already have an account? <a href="#">Login</a></p>
             </form>
         </article>
     </section>

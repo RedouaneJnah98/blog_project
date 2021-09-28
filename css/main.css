@@ -261,7 +261,8 @@ main .infos-card .author-name {
   font-size: 35px;
 }
 .form-infos form {
-  margin-top: 3rem;
+  width: 500px;
+  margin-top: 1rem;
 }
 .form-infos form h1 {
   font-size: 2rem;
@@ -273,18 +274,31 @@ main .infos-card .author-name {
   margin-bottom: 0.5rem;
   color: #151443;
 }
+.form-infos form .input-name {
+  width: 240px;
+}
 .form-infos form input {
   margin-bottom: 1rem;
-  width: 500px;
-  height: 40px;
-  border-radius: 5px;
   outline: none;
-  border: none;
+}
+.form-infos form select,
+.form-infos form input {
+  border-radius: 5px;
   background: #f3f3f3;
+  border: none;
   padding: 0.5rem 1rem;
   font-size: 0.9rem;
   font-weight: 300;
   color: #7968a9;
+  height: 40px;
+}
+.form-infos form .signup-btn {
+  background: #151443;
+  color: #fff;
+  width: 100%;
+  padding: 0.65rem 0;
+  margin-top: 1.5rem;
+  border-radius: 5px;
 }
 
 body {
