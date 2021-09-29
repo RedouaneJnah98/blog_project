@@ -1,0 +1,73 @@
+@use "../components" as *;
+
+.login-img {
+  width: 50vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.form-infos {
+  max-width: 600px;
+  width: 100%;
+
+  .black-logo {
+    width: 150px;
+  }
+
+  .close-btn {
+    font-size: 35px;
+  }
+
+  form {
+    width: 500px;
+
+    margin-top: 1rem;
+
+    h1 {
+      font-size: 2rem;
+      color: $main-clr;
+      font-weight: 600;
+    }
+
+    label {
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: $main-clr;
+    }
+
+    .input-name {
+      width: 240px;
+    }
+
+    input {
+      margin-bottom: 1rem;
+      outline: none;
+    }
+
+    select,
+    input {
+      border-radius: 5px;
+      background: $input-bcg;
+      border: none;
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+      font-weight: 300;
+      color: $third-clr;
+    }
+
+    .input,
+    .select {
+      height: 40px;
+    }
+  }
+}
+
+.login-btn,
+.signup-btn {
+  background: $main-clr;
+  color: $white-clr;
+  width: 100%;
+  padding: 0.65rem 0;
+  margin-top: 1.5rem;
+  border-radius: 5px;
+}

@@ -66,10 +66,6 @@ footer .footer-logo {
   width: 100px;
 }
 
-.hello {
-  color: blue;
-}
-
 .home {
   display: grid;
   align-content: center;
@@ -244,6 +240,49 @@ main .infos-card .author-name {
   font-weight: bold;
 }
 
+.section-container .form h1 {
+  color: #151443;
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 2rem 0 3rem 0;
+}
+.section-container .form h4 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #151443;
+}
+.section-container .form p {
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
+  color: #7968a9;
+}
+.section-container .form .reset-link {
+  color: #1da1f2;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.section-container .form .label-remember {
+  font-size: 0.9rem;
+  color: #7968a9;
+  font-weight: 300;
+}
+
+.account-link {
+  color: #7968a9;
+  font-size: 0.85rem;
+}
+
+.login-link,
+.signin-link {
+  color: #1da1f2;
+  font-weight: 600;
+}
+.login-link:hover,
+.signin-link:hover {
+  text-decoration: underline;
+  color: #1da1f2;
+}
+
 .login-img {
   width: 50vw;
   height: 100vh;
@@ -290,9 +329,14 @@ main .infos-card .author-name {
   font-size: 0.9rem;
   font-weight: 300;
   color: #7968a9;
+}
+.form-infos form .input,
+.form-infos form .select {
   height: 40px;
 }
-.form-infos form .signup-btn {
+
+.login-btn,
+.signup-btn {
   background: #151443;
   color: #fff;
   width: 100%;
