@@ -1,6 +1,6 @@
 <!-- footer -->
 <footer>
-    <p>&copy; <img src="./images/logo.svg" class="footer-logo" alt="footer logo"></p>
+    <p>&copy; <span class="date"></span> <img src="./images/logo.svg" class="footer-logo" alt="footer logo"></p>
 </footer>
 <!-- end of footer -->
 

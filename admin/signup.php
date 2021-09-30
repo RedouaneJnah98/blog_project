@@ -9,6 +9,8 @@ if (isset($_POST["register"])) {
     $confirmPassword = $_POST["confirmPassword"];
     $country = $_POST["country"];
 
+    $password = password_hash($password, PASSWORD_BCRYPT, ["cost" => 12]);
+
     $sql = "INSERT INTO users(firstname, lastname, emailAddress, password, confirmPassword, country) VALUES('{$firstname}', '{$lastname}', '{$emailAddress}', '{$password}', '{$confirmPassword}', '{$country}')";
     $sendQuery = mysqli_query($connect, $sql);
 

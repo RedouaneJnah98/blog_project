@@ -1,5 +1,27 @@
 <?php include "./components/adminHeader.php"; ?>
 
+<?php
+if (isset($_POST["login"])) {
+    $firstname = mysqli_real_escape_string($connect, $_POST["firstname"]);
+    $password = mysqli_real_escape_string($connect, $_POST["password"]);
+
+    $sql = "SELECT * FROM users WHERE firstname = '{$firstname}'";
+    $sqlQuery = mysqli_query($connect, $sql);
+
+    $row = mysqli_fetch_array($sqlQuery);
+    $db_firstname = $row["firstname"];
+    $db_password = $row["password"];
+
+    if (password_verify($password, $db_password)) {
+        $_SESSION["username"] = $db_firstname;
+
+        header("Location: index.php");
+    } else {
+        echo "there is an error";
+    }
+}
+?>
+
 <section class="d-flex flex-wrap section-container">
     <div>
         <img src="../images/login-img.jpg" class="login-img" alt="login image">
