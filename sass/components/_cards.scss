@@ -3,6 +3,10 @@
 .card {
   border-radius: $radius;
 
+  .txt-content {
+    height: 150px;
+  }
+
   img {
     border-radius: $radius $radius 0 0;
   }
@@ -27,4 +31,12 @@
     color: $third-clr;
     font-weight: bold;
   }
+}
+
+.box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }

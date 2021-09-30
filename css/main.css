@@ -218,6 +218,9 @@ main .infos-card .author-name {
 .card {
   border-radius: 0.625rem;
 }
+.card .txt-content {
+  height: 150px;
+}
 .card img {
   border-radius: 0.625rem 0.625rem 0 0;
 }
@@ -238,6 +241,14 @@ main .infos-card .author-name {
   padding-left: 0.5rem;
   color: #7968a9;
   font-weight: bold;
+}
+
+.box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 .section-container .form h1 {
