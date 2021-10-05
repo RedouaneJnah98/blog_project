@@ -1,25 +1,5 @@
 <?php include "./components/adminHeader.php"; ?>
 
-<?php
-if (isset($_POST["register"])) {
-    $firstname = $_POST["firstname"];
-    $lastname = $_POST["lastname"];
-    $emailAddress = $_POST["emailAddress"];
-    $password = $_POST["password"];
-    $confirmPassword = $_POST["confirmPassword"];
-    $country = $_POST["country"];
-
-    $password = password_hash($password, PASSWORD_BCRYPT, ["cost" => 12]);
-
-    $sql = "INSERT INTO users(firstname, lastname, emailAddress, password, confirmPassword, country) VALUES('{$firstname}', '{$lastname}', '{$emailAddress}', '{$password}', '{$confirmPassword}', '{$country}')";
-    $sendQuery = mysqli_query($connect, $sql);
-
-    if (!$sendQuery) {
-        die("FAILED QUERY" . mysqli_error($connect));
-    }
-}
-?>
-
 <section class="d-flex flex-wrap">
     <div>
         <img src="../images/signup-img.jpg" class="login-img" alt="signup image">
@@ -33,7 +13,7 @@ if (isset($_POST["register"])) {
             <button type="button" class="close-btn"><i class="ri-close-line"></i></button>
         </div>
 
-        <form action="" method="post">
+        <form action="utils/signup.inc.php" method="post">
             <h1 class="mb-4">Create an account</h1>
 
             <div class="d-flex justify-content-between">
@@ -48,7 +28,7 @@ if (isset($_POST["register"])) {
             </div>
             <div class="d-grid">
                 <label for="email">Email address</label>
-                <input type="email" name="emailAddress" class="input" placeholder="Enter your email">
+                <input type="email" name="email" class="input" placeholder="Enter your email">
             </div>
             <div class="d-grid">
                 <label for="password">Password</label>
@@ -56,7 +36,7 @@ if (isset($_POST["register"])) {
             </div>
             <div class="d-grid">
                 <label for="confirmPassword">Confirm Password</label>
-                <input type="password" name="confirmPassword" class="input" placeholder="Confirm your password">
+                <input type="password" name="cPassword" class="input" placeholder="Confirm your password">
             </div>
             <div class="d-grid">
                 <label for="country">Country or Region of Residence</label>

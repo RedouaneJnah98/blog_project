@@ -9,15 +9,15 @@ if (isset($_POST["login"])) {
     $sqlQuery = mysqli_query($connect, $sql);
 
     $row = mysqli_fetch_array($sqlQuery);
-    $db_firstname = $row["firstname"];
     $db_password = $row["password"];
+    $db_firstname = $row["firstname"];
 
     if (password_verify($password, $db_password)) {
         $_SESSION["username"] = $db_firstname;
 
         header("Location: index.php");
     } else {
-        echo "there is an error";
+        header("Location: login.php");
     }
 }
 ?>
@@ -35,7 +35,7 @@ if (isset($_POST["login"])) {
             <button type="button" class="close-btn"><i class="ri-close-line"></i></button>
         </div>
 
-        <form action="" method="post" class="form">
+        <form action="utils/login.inc.php" method="post" class="form">
             <h1 class="login-title">Login</h1>
             <h4 class="login-subtitle">Login to your account</h4>
             <p>Thank you for get back to us, share with the <br>world your taughts.</p>

@@ -1,0 +1,93 @@
+<?php
+
+function emptyInputSignup($firstname, $lastname, $emailAddress, $password, $confirmPassword, $country)
+{
+    $result;
+    if (empty($firstname) || empty($lastname) || empty($emailAddress) || empty($password) || empty($confirmPassword) || empty($country)) {
+        $result = true;
+    } else {
+        $result = false;
+    }
+
+    return $result;
+}
+
+function invalidUsername($username)
+{
+    $result;
+    if (!preg_match("/^[a-zA-Z0-9]*$/", $username)) {
+        $result = true;
+    } else {
+        $result = false;
+    }
+
+    return $result;
+}
+
+function invalidEmail($email)
+{
+    $result;
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $result = true;
+    } else {
+        $result = false;
+    }
+
+    return $result;
+}
+
+function pwdMatch($password, $confirmPassword)
+{
+    $result;
+    if ($password !== $confirmPassword) {
+        $result = true;
+    } else {
+        $result = false;
+    }
+
+    return $result;
+}
+
+function userExists($connect, $username, $email)
+{
+    $sql = "SELECT * FROM user WHERE username = ? OR email = ?";
+    $stmt = mysqli_stmt_init($connect);
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        header("Location: ../signup.php?error=stmtFailed");
+        exit();
+    }
+
+    mysqli_stmt_bind_param($stmt, "ss", $username, $email);
+    mysqli_stmt_execute($stmt);
+
+    $resultData = mysqli_stmt_get_result($stmt);
+
+    if ($row = mysqli_fetch_assoc($resultData)) {
+        return $row;
+    } else {
+        $result = false;
+        return $result;
+    }
+
+    mysqli_stmt_close($stmt);
+}
+
+function createUser($connect, $firstname, $lastname, $email, $password, $confirmPassword, $country)
+{
+    $sql = "INSERT INTO user (firstname, lastname, email, registeredAt, password, cPassword, country) VALUES (?, ?, ?, ?, ?, ?, ?)";
+    $stmt = mysqli_stmt_init($connect);
+
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        header("Location: ../signup.php?error=createUserFailed");
+        exit();
+    }
+
+    $hashedPwd = password_hash($password, PASSWORD_DEFAULT);
+
+    mysqli_stmt_bind_param($stmt, 'sssssss', $firstname, $lastname, $email, date("Y-m-d H:i:s"), $hashedPwd, $hashedPwd, $country);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+
+    header("Location: ../index.php?error=none");
+    exit();
+}
