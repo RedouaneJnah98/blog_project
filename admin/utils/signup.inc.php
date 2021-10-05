@@ -1,5 +1,6 @@
 <?php
 
+// Always require files on the top 
 require_once "../db/database.php";
 require_once "functions.php";
 
