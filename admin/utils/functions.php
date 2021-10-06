@@ -72,9 +72,10 @@ function userExists($connect, $username, $email)
     mysqli_stmt_close($stmt);
 }
 
+
 function createUser($connect, $firstname, $lastname, $email, $password, $confirmPassword, $country)
 {
-    $sql = "INSERT INTO user (firstname, lastname, email, registeredAt, password, cPassword, country) VALUES (?, ?, ?, ?, ?, ?, ?)";
+    $sql = "INSERT INTO user (firstname, lastname, username, email, registeredAt, password, cPassword, country) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
     $stmt = mysqli_stmt_init($connect);
 
     if (!mysqli_stmt_prepare($stmt, $sql)) {
@@ -83,11 +84,22 @@ function createUser($connect, $firstname, $lastname, $email, $password, $confirm
     }
 
     $hashedPwd = password_hash($password, PASSWORD_DEFAULT);
+    $hashedCPwd = password_hash($confirmPassword, PASSWORD_DEFAULT);
 
-    mysqli_stmt_bind_param($stmt, 'sssssss', $firstname, $lastname, $email, date("Y-m-d H:i:s"), $hashedPwd, $hashedPwd, $country);
+    mysqli_stmt_bind_param($stmt, 'ssssssss', $firstname, $lastname, randomUsername($firstname, $lastname), $email, date("Y-m-d H:i:s"), $hashedPwd, $hashedCPwd, $country);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
 
     header("Location: ../index.php?error=none");
     exit();
+}
+
+function randomUsername(string $firstname, string $lastname)
+{
+    $firstN = strtolower($firstname);
+    $lastN = substr(strtolower($lastname), 0, 3);
+    $randomNumber = rand(0, 100);
+    $username = $firstN . $lastN . $randomNumber;
+
+    return $username;
 }
