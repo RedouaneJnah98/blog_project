@@ -9,7 +9,7 @@
     <article class="ms-5 form-infos">
         <div class="d-flex justify-content-between align-items-center">
             <a href="../index.php">
-                <img src="../images/black-logo.svg" class="black-logo" alt="">
+                <img src="../images/blue-logo.svg" class="black-logo" alt="">
             </a>
             <button type="button" class="close-btn"><i class="ri-close-line"></i></button>
         </div>
