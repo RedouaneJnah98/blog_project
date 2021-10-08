@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 function emptyInputSignup($firstname, $lastname, $emailAddress, $password, $confirmPassword, $country)
 {
     $result;
@@ -102,4 +104,40 @@ function randomUsername(string $firstname, string $lastname)
     $username = $firstN . $lastN . $randomNumber;
 
     return $username;
+}
+
+function emptyInputLogin($username, $pwd)
+{
+    $result;
+    if (empty($username) || empty($pwd)) {
+        $result = true;
+    } else {
+        $result = false;
+    }
+
+    return $result;
+}
+
+function loginUser($connect, $username, $pwd)
+{
+    $userExists = userExists($connect, $username, $pwd);
+
+    if ($userExists === false) {
+        header('Location: ../login.php?error=wrongLogin');
+        echo "there is an error";
+        exit();
+    }
+
+    $pwdHashed = $userExists["password"];
+    $checkPwd = password_verify($pwd, $pwdHashed);
+
+    if ($checkPwd === false) {
+        header('Location: ../login.php?error=wrongPassword');
+        exit();
+    } elseif ($checkPwd === true) {
+        $_SESSION["userId"] = $userExists["id"];
+        $_SESSION["username"] = $userExists["username"];
+        header('Location: ../index.php');
+        exit();
+    }
 }

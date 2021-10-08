@@ -1,26 +1,5 @@
 <?php include "./components/adminHeader.php"; ?>
-
-<?php
-if (isset($_POST["login"])) {
-    $firstname = mysqli_real_escape_string($connect, $_POST["firstname"]);
-    $password = mysqli_real_escape_string($connect, $_POST["password"]);
-
-    $sql = "SELECT * FROM users WHERE firstname = '{$firstname}'";
-    $sqlQuery = mysqli_query($connect, $sql);
-
-    $row = mysqli_fetch_array($sqlQuery);
-    $db_password = $row["password"];
-    $db_firstname = $row["firstname"];
-
-    if (password_verify($password, $db_password)) {
-        $_SESSION["username"] = $db_firstname;
-
-        header("Location: index.php");
-    } else {
-        header("Location: login.php");
-    }
-}
-?>
+<?php session_start(); ?>
 
 <section class="d-flex flex-wrap section-container">
     <div>
@@ -42,7 +21,7 @@ if (isset($_POST["login"])) {
 
             <div class="d-grid">
                 <label for="username">Username</label>
-                <input type="text" name="firstname" class="input" placeholder="Enter your Firstname">
+                <input type="text" name="username" class="input" placeholder="Enter your Firstname">
             </div>
             <div class="d-grid">
                 <label for="password">Password</label>
