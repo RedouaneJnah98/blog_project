@@ -141,3 +141,25 @@ function loginUser($connect, $username, $pwd)
         exit();
     }
 }
+
+
+function errorValidation()
+{
+
+    switch ($_GET["error"]) {
+        case 'emptyInput':
+            echo "<p class='d-flex align-items-center error-msg'>This field cannot be empty! <i class='ri-error-warning-fill ms-2'></i></p>";
+            break;
+
+        case "invalidEmail":
+            echo "<p class='d-flex align-items-center error-msg'>Email format is incorrect! <i class='ri-error-warning-fill'></i></p>";
+            break;
+
+        case "passwordsNotMatch":
+            echo "<p class='d-flex align-items-center error-msg'>Password is not the same!<i class='ri-error-warning-fill'></i></p>";
+            break;
+
+        case "default":
+            break;
+    }
+}

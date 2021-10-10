@@ -1,11 +1,16 @@
-<?php include "./components/adminHeader.php"; ?>
+<?php
+
+include "./components/adminHeader.php";
+include "utils/functions.php";
+
+?>
 
 <section class="d-flex flex-wrap">
     <div>
-        <img src="../images/signup-img.jpg" class="login-img" alt="signup image">
+        <img src="../images/signup-img.jpg" class="signup-img" alt="signup image">
     </div>
 
-    <article class="ms-5 form-infos">
+    <article class="ms-5 form-infos mt-4">
         <div class="d-flex justify-content-between align-items-center">
             <a href="../index.php">
                 <img src="../images/blue-logo.svg" class="black-logo" alt="">
@@ -17,31 +22,37 @@
             <h1 class="mb-4">Create an account</h1>
 
             <div class="d-flex justify-content-between">
-                <div class="d-grid">
+                <div class="d-grid mb-3">
                     <label for="firstname">Firstname</label>
                     <input type="text" name="firstname" class="input input-name" placeholder="Firstname">
+                    <?php errorValidation(); ?>
                 </div>
-                <div class="d-grid">
+                <div class="d-grid mb-3">
                     <label for="lastname">Lastname</label>
                     <input type="text" name="lastname" class="input input-name" placeholder="lastname">
+                    <?php errorValidation(); ?>
                 </div>
             </div>
-            <div class="d-grid">
+            <div class="d-grid mb-3">
                 <label for="email">Email address</label>
                 <input type="email" name="email" class="input" placeholder="Enter your email">
+                <?php errorValidation(); ?>
             </div>
-            <div class="d-grid">
+            <div class="d-grid mb-3">
                 <label for="password">Password</label>
                 <input type="password" name="password" class="input" placeholder="Enter your password">
+                <?php errorValidation(); ?>
             </div>
-            <div class="d-grid">
+            <div class="d-grid mb-3">
                 <label for="confirmPassword">Confirm Password</label>
                 <input type="password" name="cPassword" class="input" placeholder="Confirm your password">
+                <?php errorValidation(); ?>
             </div>
-            <div class="d-grid">
+            <div class="d-grid mb-3">
                 <label for="country">Country or Region of Residence</label>
                 <select name="country" id="countries" class="select">
                     <option value="select-country">Select Country</option>
+                    <?php errorValidation(); ?>
                 </select>
             </div>
 

@@ -6,7 +6,7 @@
         <img src="../images/login-img.jpg" class="login-img" alt="login image">
     </div>
 
-    <article class="ms-5 form-infos">
+    <article class="ms-5 form-infos mt-4">
         <div class="d-flex justify-content-between align-items-center">
             <a href="../index.php">
                 <img src="../images/blue-logo.svg" class="black-logo" alt="">
@@ -37,7 +37,8 @@
             </div>
 
             <button type="submit" name="login" class="login-btn">Sign In</button>
-            <p class="account-link mt-3">Don't have an account yet? <a href="signup.php" class="signin-link">Join us</a>
+            <p class="account-link mt-3">Don't have an account yet? <a href="signup.php?error=default"
+                    class="signin-link">Join us</a>
             </p>
         </form>
     </article>

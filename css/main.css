@@ -251,6 +251,12 @@ main .infos-card .author-name {
   flex-direction: column;
 }
 
+.login-img {
+  width: 50vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
 .section-container .form h1 {
   color: #151443;
   font-weight: 700;
@@ -294,9 +300,9 @@ main .infos-card .author-name {
   color: #1da1f2;
 }
 
-.login-img {
+.signup-img {
   width: 50vw;
-  height: 100vh;
+  height: 115vh;
   object-fit: cover;
 }
 
@@ -321,14 +327,13 @@ main .infos-card .author-name {
 }
 .form-infos form label {
   font-weight: 600;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   color: #151443;
 }
 .form-infos form .input-name {
   width: 240px;
 }
 .form-infos form input {
-  margin-bottom: 1rem;
   outline: none;
 }
 .form-infos form select,
@@ -340,6 +345,7 @@ main .infos-card .author-name {
   font-size: 0.9rem;
   font-weight: 300;
   color: #7968a9;
+  outline: none;
 }
 .form-infos form .input,
 .form-infos form .select {
@@ -354,6 +360,12 @@ main .infos-card .author-name {
   padding: 0.65rem 0;
   margin-top: 1.5rem;
   border-radius: 5px;
+}
+
+.error-msg {
+  font-size: 0.8rem;
+  margin-top: 0.4rem;
+  color: #ff3333;
 }
 
 body {

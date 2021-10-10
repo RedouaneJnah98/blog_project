@@ -1,5 +1,11 @@
 @use "../components/" as *;
 
+.login-img {
+  width: 50vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
 .section-container {
   .form {
     h1 {
