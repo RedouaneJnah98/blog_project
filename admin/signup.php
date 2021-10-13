@@ -10,7 +10,7 @@ include "utils/functions.php";
         <img src="../images/signup-img.jpg" class="signup-img" alt="signup image">
     </div>
 
-    <article class="ms-5 form-infos mt-4">
+    <article class="ms-5 form-infos">
         <div class="d-flex justify-content-between align-items-center">
             <a href="../index.php">
                 <img src="../images/blue-logo.svg" class="black-logo" alt="">
@@ -25,34 +25,74 @@ include "utils/functions.php";
                 <div class="d-grid mb-3">
                     <label for="firstname">Firstname</label>
                     <input type="text" name="firstname" class="input input-name" placeholder="Firstname">
-                    <?php errorValidation(); ?>
+                    <?php
+
+                    if (isset($_GET["error"])) {
+                        if ($_GET["error"] === "emptyInput") {
+                            echo "<p class='d-flex align-items-center error-msg msg'>Password is not the same!<i class='ri-error-warning-fill'></i></p>";
+                        }
+                    }
+
+                    ?>
                 </div>
                 <div class="d-grid mb-3">
                     <label for="lastname">Lastname</label>
                     <input type="text" name="lastname" class="input input-name" placeholder="lastname">
-                    <?php errorValidation(); ?>
+                    <?php
+
+                    if (isset($_GET["error"])) {
+                        if ($_GET["error"] === "emptyInput") {
+                            echo "<p class='d-flex align-items-center error-msg msg'>Password is not the same!<i class='ri-error-warning-fill'></i></p>";
+                        }
+                    }
+
+                    ?>
                 </div>
             </div>
             <div class="d-grid mb-3">
                 <label for="email">Email address</label>
                 <input type="email" name="email" class="input" placeholder="Enter your email">
-                <?php errorValidation(); ?>
+                <?php
+
+                if (isset($_GET["error"])) {
+                    if ($_GET["error"] === "invalidEmail") {
+                        echo "<p class='d-flex align-items-center error-msg msg'>Password is not the same!<i class='ri-error-warning-fill'></i></p>";
+                    }
+                }
+
+                ?>
             </div>
             <div class="d-grid mb-3">
                 <label for="password">Password</label>
                 <input type="password" name="password" class="input" placeholder="Enter your password">
-                <?php errorValidation(); ?>
+                <?php
+
+                if (isset($_GET["error"])) {
+                    if ($_GET["error"] === "passwordsNotMatch") {
+                        echo "<p class='d-flex align-items-center error-msg msg'>Password is not the same!<i class='ri-error-warning-fill'></i></p>";
+                    }
+                }
+
+                ?>
             </div>
             <div class="d-grid mb-3">
                 <label for="confirmPassword">Confirm Password</label>
                 <input type="password" name="cPassword" class="input" placeholder="Confirm your password">
-                <?php errorValidation(); ?>
+                <?php
+
+                if (isset($_GET["error"])) {
+                    if ($_GET["error"] === "passwordsNotMatch") {
+                        echo "<p class='d-flex align-items-center error-msg msg'>Password is not the same!<i class='ri-error-warning-fill'></i></p>";
+                    }
+                }
+
+                ?>
+
             </div>
             <div class="d-grid mb-3">
                 <label for="country">Country or Region of Residence</label>
                 <select name="country" id="countries" class="select">
                     <option value="select-country">Select Country</option>
-                    <?php errorValidation(); ?>
                 </select>
             </div>
 

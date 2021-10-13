@@ -6,7 +6,7 @@
         <img src="../images/login-img.jpg" class="login-img" alt="login image">
     </div>
 
-    <article class="ms-5 form-infos mt-4">
+    <article class="ms-5 form-infos">
         <div class="d-flex justify-content-between align-items-center">
             <a href="../index.php">
                 <img src="../images/blue-logo.svg" class="black-logo" alt="">

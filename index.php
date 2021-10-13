@@ -28,7 +28,7 @@
 
     <section class="home">
         <div class="img-container">
-            <img src="./images/bcg-img.jpg" class="img" alt="">
+            <img src="./images/bcg.jpg" class="img" alt="">
         </div>
         <div class="hero-infos container">
             <h4 class="hero-subtitle">read the latest articles</h4>

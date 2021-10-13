@@ -1,14 +1,15 @@
 @use "../components" as *;
 
 .signup-img {
-  width: 50vw;
-  height: 115vh;
+  width: 45vw;
+  height: 100%;
   object-fit: cover;
 }
 
 .form-infos {
-  max-width: 600px;
+  max-width: 650px;
   width: 100%;
+  padding: 2rem 0;
 
   .black-logo {
     width: 150px;
@@ -76,4 +77,34 @@
   font-size: 0.8rem;
   margin-top: 0.4rem;
   color: #ff3333;
+}
+
+.shake {
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97);
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
 }

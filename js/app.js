@@ -27,3 +27,10 @@ closeBtn.addEventListener("click", () => {
 
   return window.location.replace(redirectPage)
 })
+
+const errorMsg = document.querySelectorAll(".msg")
+console.log(errorMsg)
+
+errorMsg.forEach((message) => {
+  message.classList.add("shake")
+})

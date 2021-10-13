@@ -143,23 +143,22 @@ function loginUser($connect, $username, $pwd)
 }
 
 
-function errorValidation()
+function errorFormHandling(string $error)
+
 {
 
     switch ($_GET["error"]) {
-        case 'emptyInput':
+        case $error:
             echo "<p class='d-flex align-items-center error-msg'>This field cannot be empty! <i class='ri-error-warning-fill ms-2'></i></p>";
             break;
 
-        case "invalidEmail":
-            echo "<p class='d-flex align-items-center error-msg'>Email format is incorrect! <i class='ri-error-warning-fill'></i></p>";
-            break;
-
-        case "passwordsNotMatch":
+        case $error:
             echo "<p class='d-flex align-items-center error-msg'>Password is not the same!<i class='ri-error-warning-fill'></i></p>";
             break;
 
-        case "default":
+        case $error:
+            echo "<p class='d-flex align-items-center error-msg'>Email format is incorrect! <i class='ri-error-warning-fill'></i></p>";
+        default:
             break;
     }
 }
