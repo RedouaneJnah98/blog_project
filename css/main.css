@@ -395,6 +395,11 @@ main .infos-card .author-name {
     transform: translate3d(4px, 0, 0);
   }
 }
+.nav-links {
+  padding: 0;
+  list-style: none;
+}
+
 body {
   font-size: 16px;
   background: #f8f8f8;

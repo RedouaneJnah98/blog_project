@@ -7,7 +7,7 @@
             <img src="./images/logo.svg" class="logo-icon" alt="logo icon">
         </div>
         <div class="links-container">
-            <ul class="d-flex ">
+            <ul class="d-flex">
                 <li class="me-5">
                     <a href="#">Contact</a>
                 </li>
