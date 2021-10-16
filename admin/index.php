@@ -8,9 +8,10 @@ if (isset($_SESSION["username"])) {
 ?>
 <a href="utils/logout.inc.php">Logout</a>
 
-<?php } else {
+<?php
+} else {
     header("Location: login.php");
-} ?>
-
+}
+?>
 
 <?php include "./components/adminFooter.php"; ?>

@@ -137,28 +137,9 @@ function loginUser($connect, $username, $pwd)
     } elseif ($checkPwd === true) {
         $_SESSION["userId"] = $userExists["id"];
         $_SESSION["username"] = $userExists["username"];
+        $_SESSION["pwd"] = $userExists["password"];
+
         header('Location: ../index.php');
         exit();
-    }
-}
-
-
-function errorFormHandling(string $error)
-
-{
-
-    switch ($_GET["error"]) {
-        case $error:
-            echo "<p class='d-flex align-items-center error-msg'>This field cannot be empty! <i class='ri-error-warning-fill ms-2'></i></p>";
-            break;
-
-        case $error:
-            echo "<p class='d-flex align-items-center error-msg'>Password is not the same!<i class='ri-error-warning-fill'></i></p>";
-            break;
-
-        case $error:
-            echo "<p class='d-flex align-items-center error-msg'>Email format is incorrect! <i class='ri-error-warning-fill'></i></p>";
-        default:
-            break;
     }
 }

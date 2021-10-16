@@ -212,7 +212,6 @@ main .infos-card .author-name {
   width: 100%;
   height: 325px;
   object-fit: cover;
-  border-radius: 0.625rem 0 0 0.625rem;
 }
 
 .card {
@@ -253,7 +252,7 @@ main .infos-card .author-name {
 
 .login-img {
   width: 45vw;
-  height: 100vh;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -268,7 +267,7 @@ main .infos-card .author-name {
   margin-bottom: 0.5rem;
   color: #151443;
 }
-.section-container .form p {
+.section-container .form .p {
   margin-bottom: 2rem;
   font-size: 0.9rem;
   color: #7968a9;

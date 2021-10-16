@@ -2,7 +2,7 @@
 
 .login-img {
   width: 45vw;
-  height: 100vh;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -21,7 +21,7 @@
       color: $main-clr;
     }
 
-    p {
+    .p {
       margin-bottom: 2rem;
       font-size: 0.9rem;
       color: $third-clr;

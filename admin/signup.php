@@ -29,7 +29,7 @@ include "utils/functions.php";
 
                     if (isset($_GET["error"])) {
                         if ($_GET["error"] === "emptyInput") {
-                            echo "<p class='d-flex align-items-center error-msg msg'>Password is not the same!<i class='ri-error-warning-fill'></i></p>";
+                            echo "<p class='d-flex align-items-center error-msg msg'>Password is not the same!<i class='ri-error-warning-fill ms-2'></i></p>";
                         }
                     }
 
@@ -42,7 +42,7 @@ include "utils/functions.php";
 
                     if (isset($_GET["error"])) {
                         if ($_GET["error"] === "emptyInput") {
-                            echo "<p class='d-flex align-items-center error-msg msg'>Password is not the same!<i class='ri-error-warning-fill'></i></p>";
+                            echo "<p class='d-flex align-items-center error-msg msg'>Password is not the same!<i class='ri-error-warning-fill ms-2'></i></p>";
                         }
                     }
 
@@ -56,7 +56,7 @@ include "utils/functions.php";
 
                 if (isset($_GET["error"])) {
                     if ($_GET["error"] === "invalidEmail") {
-                        echo "<p class='d-flex align-items-center error-msg msg'>Password is not the same!<i class='ri-error-warning-fill'></i></p>";
+                        echo "<p class='d-flex align-items-center error-msg msg'>Password is not the same!<i class='ri-error-warning-fill ms-2'></i></p>";
                     }
                 }
 
@@ -69,7 +69,7 @@ include "utils/functions.php";
 
                 if (isset($_GET["error"])) {
                     if ($_GET["error"] === "passwordsNotMatch") {
-                        echo "<p class='d-flex align-items-center error-msg msg'>Password is not the same!<i class='ri-error-warning-fill'></i></p>";
+                        echo "<p class='d-flex align-items-center error-msg msg'>Password is not the same!<i class='ri-error-warning-fill ms-2'></i></p>";
                     }
                 }
 
@@ -82,7 +82,7 @@ include "utils/functions.php";
 
                 if (isset($_GET["error"])) {
                     if ($_GET["error"] === "passwordsNotMatch") {
-                        echo "<p class='d-flex align-items-center error-msg msg'>Password is not the same!<i class='ri-error-warning-fill'></i></p>";
+                        echo "<p class='d-flex align-items-center error-msg msg'>Password is not the same!<i class='ri-error-warning-fill ms-2'></i></p>";
                     }
                 }
 
