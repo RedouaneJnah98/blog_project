@@ -436,6 +436,10 @@ main .infos-card .author-name {
 .sidebar .nav-links li > a > i {
   margin-right: 1.5rem;
 }
+.sidebar .nav-links .logout-link {
+  position: absolute;
+  bottom: 1.5rem;
+}
 .sidebar .logo-container {
   display: flex;
   align-items: center;
@@ -552,6 +556,102 @@ main .infos-card .author-name {
   height: 45px;
   border-radius: 50%;
   object-fit: cover;
+}
+
+.box-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr auto;
+  grid-gap: 1rem;
+}
+
+.box-content {
+  width: 180px;
+  background: #fff;
+  height: 100px;
+  border-radius: 0.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.box-content .content {
+  margin-left: 1rem;
+  line-height: 1;
+  padding-top: 0.5rem;
+}
+.box-content .content h4 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #151443;
+}
+.box-content .content p {
+  color: #8790a1;
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+.box-content .icon-cont {
+  width: 60px;
+  height: 60px;
+  background: #e1f9fc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.625rem;
+}
+.box-content .icon-cont img {
+  width: 40px;
+}
+
+.weather-box {
+  width: 300px;
+  background: #fff;
+  height: 250px;
+  border-radius: 0.625rem;
+  padding: 1rem;
+}
+.weather-box .ri-newspaper-line {
+  font-size: 2.5rem;
+  color: #8790a1;
+}
+.weather-box .weather-info {
+  padding-top: 0.5rem;
+}
+.weather-box .weather-info h5 {
+  font-size: 1rem;
+  color: #151443;
+  font-weight: 600;
+  line-height: 0.5;
+}
+.weather-box .weather-info h6 {
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: #8790a1;
+}
+.weather-box .weather-info a {
+  color: #1081e8;
+  font-size: 0.85rem;
+  font-weight: 400;
+}
+.weather-box .infos .weather-icon {
+  width: 50px;
+  height: 50px;
+}
+.weather-box .infos h5 {
+  font-size: 1rem;
+  font-weight: 600;
+  counter-reset: #151443;
+}
+.weather-box .infos .degree {
+  font-size: 1.1rem;
+}
+.weather-box .infos .degree span {
+  color: #8790a1;
+  font-weight: 300;
+  font-size: 0.95rem;
+}
+.weather-box .infos h6 {
+  font-size: 0.9rem;
+  font-weight: 300;
+  color: #8790a1;
 }
 
 body {

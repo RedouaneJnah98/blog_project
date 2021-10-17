@@ -1,0 +1,114 @@
+@use "../components/" as *;
+
+.box-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr auto;
+  grid-gap: 1rem;
+}
+
+.box-content {
+  width: 180px;
+  background: $white-clr;
+  height: 100px;
+  border-radius: $radius;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .content {
+    margin-left: 1rem;
+    line-height: 1;
+    padding-top: 0.5rem;
+
+    h4 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: $main-clr;
+    }
+
+    p {
+      color: $admin-link-clr;
+      font-weight: 300;
+      font-size: 0.9rem;
+    }
+  }
+
+  .icon-cont {
+    width: 60px;
+    height: 60px;
+    background: $icon-bcg;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: $radius;
+
+    img {
+      width: 40px;
+    }
+  }
+}
+
+.weather-box {
+  width: 300px;
+  background: $white-clr;
+  height: 250px;
+  border-radius: $radius;
+  padding: 1rem;
+
+  .ri-newspaper-line {
+    font-size: 2.5rem;
+    color: $admin-link-clr;
+  }
+
+  .weather-info {
+    padding-top: 0.5rem;
+
+    h5 {
+      font-size: 1rem;
+      color: $main-clr;
+      font-weight: 600;
+      line-height: 0.5;
+    }
+
+    h6 {
+      font-size: 0.8rem;
+      font-weight: 300;
+      color: $admin-link-clr;
+    }
+
+    a {
+      color: $logo-clr;
+      font-size: 0.85rem;
+      font-weight: 400;
+    }
+  }
+
+  .infos {
+    .weather-icon {
+      width: 50px;
+      height: 50px;
+    }
+
+    h5 {
+      font-size: 1rem;
+      font-weight: 600;
+      counter-reset: $main-clr;
+    }
+
+    .degree {
+      font-size: 1.1rem;
+
+      span {
+        color: $admin-link-clr;
+        font-weight: 300;
+        font-size: 0.95rem;
+      }
+    }
+
+    h6 {
+      font-size: 0.9rem;
+      font-weight: 300;
+      color: $admin-link-clr;
+    }
+  }
+}

@@ -1,6 +1,10 @@
 <?php
 include "./components/adminHeader.php";
 session_start();
+
+if (!isset($_SESSION["username"])) {
+    header("Location: login.php");
+} else {
 ?>
 
 <nav class="sidebar">
@@ -53,13 +57,19 @@ session_start();
                 <span class="links-name">Profile</span>
             </a>
         </li>
+        <li class="logout-link">
+            <a href="./utils/logout.inc.php">
+                <i class="ri-shut-down-line"></i>
+                <span>Logout</span>
+            </a>
+        </li>
     </ul>
 </nav>
 
 <section class="home-section px-4">
     <nav>
         <div class="sidebar-btn">
-            <i class="ri-menu-fold-line sidebar-btn"></i>
+            <i class="ri-menu-3-fill"></i>
             <span>Dashboard</span>
         </div>
         <div class="search-box">
@@ -71,10 +81,14 @@ session_start();
             <span class="message">21</span>
         </div>
         <div class="user d-flex align-items-center">
-            <h4 class="me-3">Hello, Kristina</h4>
+            <h4 class="me-3">Hello, <?php echo $_SESSION["username"]; ?></h4>
             <img src="../images/user-1.jpg" class="user-img" alt="user image">
         </div>
     </nav>
+
+    <?php } ?>
+
+    <?php require_once "./components/statistics.php"; ?>
 </section>
 
 
