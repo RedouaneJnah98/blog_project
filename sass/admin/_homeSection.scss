@@ -1,0 +1,107 @@
+@use "../components/" as *;
+
+.home-section {
+  position: relative;
+  min-height: 100vh;
+  width: calc(100% - 240px);
+  left: 240px;
+  transition: all 0.5s ease;
+
+  nav {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // width: calc(100% - 240px);
+
+    .sidebar-btn {
+      display: flex;
+      align-items: center;
+      font-size: 1.2rem;
+
+      i {
+        margin-right: 0.5rem;
+      }
+    }
+
+    .search-box {
+      position: relative;
+      height: 40px;
+      max-width: 600px;
+      width: 100%;
+
+      input {
+        width: 100%;
+        height: 100%;
+        border: none;
+        outline: none;
+        background-color: $white-clr;
+        border-radius: $radius;
+        font-size: 0.85rem;
+        padding: 0 0.8rem;
+        color: $admin-link-clr;
+      }
+
+      input::placeholder {
+        padding-left: 5px;
+        border-left: 2.5px solid $logo-clr;
+      }
+
+      .ri-search-2-line {
+        position: absolute;
+        height: 40px;
+        width: 40px;
+        right: 0.15rem;
+        top: 50%;
+        transform: translateY(-50%);
+        line-height: 40px;
+        color: $logo-clr;
+      }
+    }
+
+    .notification {
+      position: relative;
+      width: 30px;
+      height: 30px;
+      background: $white-clr;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      i {
+        color: $logo-clr;
+        font-size: 1.1rem;
+      }
+
+      .message {
+        position: absolute;
+        background-color: red;
+        width: 20px;
+        height: 20px;
+        top: -10px;
+        right: -10px;
+        border-radius: 50%;
+        font-size: 0.8rem;
+        color: $white-clr;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
+    .user {
+      h4 {
+        font-size: 0.9rem;
+        font-weight: 600;
+      }
+
+      .user-img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+  }
+}

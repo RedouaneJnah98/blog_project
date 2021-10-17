@@ -1,6 +1,52 @@
 @use "../components/" as *;
 
-.nav-links {
-  padding: 0;
-  list-style: none;
+.dashboard {
+  position: fixed;
+  height: 100%;
+  width: 240px;
+  transition: all 0.5s ease;
+  background-color: $white-clr;
+
+  .nav-links {
+    padding: 0;
+    list-style: none;
+    margin-top: 1.5rem;
+
+    li {
+      position: relative;
+      height: 50px;
+
+      a {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        transition: all 0.04s ease;
+
+        i {
+          min-width: 60px;
+          text-align: center;
+          font-size: 1.1rem;
+          color: $admin-link-clr;
+        }
+      }
+    }
+
+    li > a > i {
+      margin-right: 1.5rem;
+    }
+  }
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+    height: 80px;
+
+    .bx {
+      color: $logo-clr;
+      font-size: 1.65rem;
+      min-width: 60px;
+      text-align: center;
+    }
+  }
 }
