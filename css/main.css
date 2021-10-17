@@ -395,48 +395,62 @@ main .infos-card .author-name {
     transform: translate3d(4px, 0, 0);
   }
 }
-.dashboard {
+.sidebar {
   position: fixed;
   height: 100%;
   width: 240px;
   transition: all 0.5s ease;
-  background-color: #fff;
+  background-color: #151443;
+  overflow-x: hidden;
+  white-space: nowrap;
 }
-.dashboard .nav-links {
+.sidebar.active {
+  width: 60px;
+}
+.sidebar .logo-sidebar {
+  width: 150px;
+}
+.sidebar .nav-links {
   padding: 0;
   list-style: none;
   margin-top: 1.5rem;
 }
-.dashboard .nav-links li {
+.sidebar .nav-links li {
   position: relative;
   height: 50px;
 }
-.dashboard .nav-links li a {
+.sidebar .nav-links li a {
   height: 100%;
   width: 100%;
   display: flex;
   align-items: center;
   transition: all 0.04s ease;
+  color: #fff;
 }
-.dashboard .nav-links li a i {
+.sidebar .nav-links li a i {
   min-width: 60px;
   text-align: center;
   font-size: 1.1rem;
-  color: #8790a1;
+  color: #fff;
 }
-.dashboard .nav-links li > a > i {
+.sidebar .nav-links li > a > i {
   margin-right: 1.5rem;
 }
-.dashboard .logo-container {
+.sidebar .logo-container {
   display: flex;
   align-items: center;
   height: 80px;
 }
-.dashboard .logo-container .bx {
-  color: #1081e8;
+.sidebar .logo-container .bx {
+  color: #fff;
   font-size: 1.65rem;
   min-width: 60px;
   text-align: center;
+}
+
+.sidebar.active ~ .home-section {
+  width: calc(100% - 60px);
+  left: 60px;
 }
 
 .home-section {
@@ -451,6 +465,7 @@ main .infos-card .author-name {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
 }
 .home-section nav .sidebar-btn {
   display: flex;
@@ -458,7 +473,15 @@ main .infos-card .author-name {
   font-size: 1.2rem;
 }
 .home-section nav .sidebar-btn i {
-  margin-right: 0.5rem;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+.home-section nav .sidebar-btn i:hover {
+  color: #1081e8;
+}
+.home-section nav .sidebar-btn span {
+  color: #151443;
+  font-weight: 700;
 }
 .home-section nav .search-box {
   position: relative;
@@ -521,11 +544,12 @@ main .infos-card .author-name {
 }
 .home-section nav .user h4 {
   font-size: 0.9rem;
-  font-weight: 600;
+  font-weight: 700;
+  color: #151443;
 }
 .home-section nav .user .user-img {
-  width: 50px;
-  height: 50px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   object-fit: cover;
 }

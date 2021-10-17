@@ -13,6 +13,7 @@
     align-items: center;
     justify-content: space-between;
     // width: calc(100% - 240px);
+    width: 100%;
 
     .sidebar-btn {
       display: flex;
@@ -20,7 +21,17 @@
       font-size: 1.2rem;
 
       i {
-        margin-right: 0.5rem;
+        margin-right: 1rem;
+        cursor: pointer;
+
+        &:hover {
+          color: $logo-clr;
+        }
+      }
+
+      span {
+        color: $main-clr;
+        font-weight: 700;
       }
     }
 
@@ -93,12 +104,13 @@
     .user {
       h4 {
         font-size: 0.9rem;
-        font-weight: 600;
+        font-weight: 700;
+        color: $main-clr;
       }
 
       .user-img {
-        width: 50px;
-        height: 50px;
+        width: 45px;
+        height: 45px;
         border-radius: 50%;
         object-fit: cover;
       }

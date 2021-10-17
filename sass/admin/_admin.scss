@@ -1,11 +1,21 @@
 @use "../components/" as *;
 
-.dashboard {
+.sidebar {
   position: fixed;
   height: 100%;
   width: 240px;
   transition: all 0.5s ease;
-  background-color: $white-clr;
+  background-color: $main-clr;
+  overflow-x: hidden;
+  white-space: nowrap;
+
+  &.active {
+    width: 60px;
+  }
+
+  .logo-sidebar {
+    width: 150px;
+  }
 
   .nav-links {
     padding: 0;
@@ -22,12 +32,13 @@
         display: flex;
         align-items: center;
         transition: all 0.04s ease;
+        color: $white-clr;
 
         i {
           min-width: 60px;
           text-align: center;
           font-size: 1.1rem;
-          color: $admin-link-clr;
+          color: $white-clr;
         }
       }
     }
@@ -43,10 +54,15 @@
     height: 80px;
 
     .bx {
-      color: $logo-clr;
+      color: $white-clr;
       font-size: 1.65rem;
       min-width: 60px;
       text-align: center;
     }
   }
+}
+
+.sidebar.active ~ .home-section {
+  width: calc(100% - 60px);
+  left: 60px;
 }

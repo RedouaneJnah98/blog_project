@@ -3,11 +3,12 @@ include "./components/adminHeader.php";
 session_start();
 ?>
 
-<nav class="dashboard">
+<nav class="sidebar">
     <div class="logo-container">
-        <!-- <i class='bx bxl-blogger'></i> -->
         <i class='bx bxl-slack-old'></i>
-        <img src="../images/blue-logo.svg" alt="">
+        <a href="../index.php">
+            <img src="../images/logo.svg" class="logo-sidebar" alt="">
+        </a>
     </div>
     <ul class="nav-links">
         <li>
@@ -58,7 +59,7 @@ session_start();
 <section class="home-section px-4">
     <nav>
         <div class="sidebar-btn">
-            <i class="ri-menu-fold-line"></i>
+            <i class="ri-menu-fold-line sidebar-btn"></i>
             <span>Dashboard</span>
         </div>
         <div class="search-box">
@@ -70,7 +71,7 @@ session_start();
             <span class="message">21</span>
         </div>
         <div class="user d-flex align-items-center">
-            <h4>Hello, Kristina</h4>
+            <h4 class="me-3">Hello, Kristina</h4>
             <img src="../images/user-1.jpg" class="user-img" alt="user image">
         </div>
     </nav>

@@ -1,4 +1,5 @@
 <?php include_once "frontend/head.php"; ?>
+<?php session_start(); ?>
 
 <!-- navbar -->
 <header>
@@ -8,7 +9,15 @@
         </div>
         <div class="links-container">
             <ul class="d-flex">
-                <li class="me-5">
+                <?php
+                if (isset($_SESSION["username"])) {
+                    echo "<li>
+                             <a href='./admin'>Admin</a>
+                          </li>";
+                }
+                ?>
+
+                <li class="mx-5">
                     <a href="#">Contact</a>
                 </li>
                 <div class="d-flex align-items-center">
