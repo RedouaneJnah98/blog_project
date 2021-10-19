@@ -643,7 +643,7 @@ main .infos-card .author-name {
 .weather-box .infos .degree {
   font-size: 1.1rem;
 }
-.weather-box .infos .degree span {
+.weather-box .infos .degree-c {
   color: #8790a1;
   font-weight: 300;
   font-size: 0.95rem;

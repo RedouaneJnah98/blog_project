@@ -59,7 +59,7 @@ if (!isset($_SESSION["username"])) {
         </li>
         <li class="logout-link">
             <a href="./utils/logout.inc.php">
-                <i class="ri-shut-down-line"></i>
+                <i class="ri-user-received-2-fill"></i>
                 <span>Logout</span>
             </a>
         </li>

@@ -39,23 +39,25 @@
         <div class="d-flex align-items-center">
             <i class="ri-newspaper-line"></i>
             <div class="ms-3 weather-info">
+
                 <?php
                 date_default_timezone_set("Africa/Casablanca");
                 $date = date("l");
                 echo "<h5>$date Capsule</5>";
                 ?>
+
                 <h6>Get updated pon the fly</h6>
                 <a href="#" class="d-flex align-items-center">Brief me <i class="ri-arrow-right-line ms-2"></i></a>
             </div>
         </div>
 
         <div class="infos mt-5">
-            <h5>Tangier, Morocco</h5>
+            <h5 class="zone"></h5>
             <div class="d-flex mt-3">
-                <img src="../images/assets/weather-icon.png" class="weather-icon" alt="icon">
+                <img src="../images/assets/moon.png" class="weather-icon" alt="icon">
                 <div class="ms-2">
-                    <h5 class="degree">18<span>°c</span></h5>
-                    <h6>Cloudy day, chances of rain</h6>
+                    <h5><span class="degree"></span><span class="degree-c">°c</span></h5>
+                    <h6 class="weather-desc"></h6>
                 </div>
             </div>
         </div>
