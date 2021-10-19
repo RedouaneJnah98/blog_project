@@ -1,3 +1,5 @@
+require("dotenv").config()
+
 const sidebar = document.querySelector(".sidebar")
 const sidebarBtn = document.querySelector(".sidebar-btn")
 const zone = document.querySelector(".zone")
@@ -8,7 +10,7 @@ sidebarBtn.addEventListener("click", () => {
   sidebar.classList.toggle("active")
 })
 
-const API_KEY = "eff509ee2736ba895d780a864316c08a"
+const API_KEY = process.env.API_KEY
 
 function sucess(position) {
   let crd = position.coords
@@ -33,8 +35,9 @@ function sucess(position) {
       degree.innerHTML = feels_like
       zone.innerHTML = timezone
       WeaterDesc.innerHTML = desc
-
-      addElement(timezone, feels_like, desc)
+    })
+    .then((err) => {
+      console.log(err)
     })
 }
 
