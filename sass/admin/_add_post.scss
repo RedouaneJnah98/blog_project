@@ -1,0 +1,73 @@
+@use "../components/" as *;
+
+.add-post-container {
+  margin-top: 2.5rem;
+
+  div {
+    display: grid;
+    margin: 1.5rem 0;
+
+    input[type="text"] {
+      max-width: 600px;
+      width: 100%;
+      border: none;
+      background-color: $input-bcg;
+      font-size: 0.9rem;
+      color: $admin-link-clr;
+      font-weight: 300;
+      padding: 1rem;
+      outline: none;
+      border-radius: $radius;
+    }
+
+    input[type="file"] {
+      font-size: 0.9rem;
+      color: $admin-link-clr;
+    }
+
+    label {
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: $main-clr;
+    }
+
+    textarea {
+      border: none;
+      outline: none;
+      background: $input-bcg;
+      border-radius: $radius;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+      color: $admin-link-clr;
+    }
+  }
+
+  .post-status,
+  .post-tag {
+    width: 200px;
+
+    select {
+      background-color: $input-bcg;
+      outline: none;
+      border: none;
+      padding: 1rem 0.5rem;
+      border-radius: $radius;
+      font-size: 0.9rem;
+      color: $admin-link-clr;
+    }
+
+    option:not(:checked) {
+      color: $five-clr;
+    }
+  }
+}
+
+.create-post-btn {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  background: $five-clr;
+  padding: 0.7rem 1.5rem;
+  color: $white-clr;
+  border-radius: 30px;
+  text-transform: capitalize;
+}

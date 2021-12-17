@@ -1,0 +1,52 @@
+@use "../components/" as *;
+
+.admin-bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 4rem 0rem;
+
+  .comments-container {
+    width: 300px;
+    background: $white-clr;
+    padding: 1.5rem 1rem;
+    border-radius: $radius;
+
+    .comments-info {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+
+    h2 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: $main-clr;
+      margin-bottom: 2rem;
+    }
+
+    h4 {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: $logo-clr;
+      text-transform: capitalize;
+
+      .commented {
+        font-weight: 300;
+        color: $admin-link-clr;
+      }
+    }
+
+    p {
+      font-size: 0.75rem;
+      color: $fourth-clr;
+    }
+
+    .comments-img {
+      max-width: 50px;
+      width: 100%;
+      height: 50px;
+      object-fit: cover;
+      border-radius: $radius;
+    }
+  }
+}

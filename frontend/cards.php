@@ -1,39 +1,78 @@
-        <div class="d-flex justify-content-between flex-wrap gap-3">
+<?php
+// define total number of results you want per page
+$results_per_page = 9;
 
-            <div class="card" style="width: 350px;">
-                <img src="./images/card-img-1.jpg" class="card-img-top" alt="card img">
-                <div class="card-body box">
-                    <h4>US Army offering $25,000 reward for missing soldier information</h4>
-                    <p class="card-txt">US Army investigators are offering a cash reward for information about the
-                        disappearance of a
-                        soldier from
-                        her base at Fort Hood, Texas.</p>
-                    <p class="c-footer">World</p>
-                </div>
-            </div>
-            <div class="card" style="width: 350px;">
-                <img src="./images/card-img-2.jpg" class="card-img-top" alt="card img">
-                <div class="card-body box">
-                    <h4>Covid deaths rare among fully vaccinated - ONS</h4>
-                    <p class="card-txt">Fully vaccinated people are much less likely to die with Covid-19 than those who
-                        aren't, or
-                        have
-                        had only one
-                        dose ...</p>
-                    <p class="c-footer">Health</p>
-                </div>
-            </div>
-            <div class="card" style="width: 350px;">
-                <img src="./images/card-img-3.jpg" class="card-img-top" alt="card-img">
-                <div class="card-body box">
-                    <h4>Elfyn Evans loses further ground to leader Ogier in Greece</h4>
-                    <p class="card-txt">Elfyn Evans lost further ground to World Rally Championship leader Sebastien
-                        Ogier,
-                        finishing
-                        sixth in the
-                        Acropolis Rally Greece</p>
-                    <p class="c-footer">Sport</p>
-                </div>
-            </div>
+$sql = "SELECT * FROM posts";
+$result = mysqli_query($connect, $sql);
+$number_of_result = mysqli_num_rows($result);
 
+// // determine the total number of pages available
+$number_of_page = ceil($number_of_result / $results_per_page);
+
+// determine which page number visitor is currently on
+if (!isset($_GET["page"])) {
+    $page = 1;
+} else {
+    $page = $_GET["page"];
+}
+
+// determine the sql LIMIT starting number for the results on the displaying page
+$page_first_result = ($page - 1) * $results_per_page;
+
+// retrieve teh selected results from database
+$query = "SELECT * FROM posts LIMIT " . $page_first_result . ',' . $results_per_page;
+$result = mysqli_query($connect, $query);
+
+?>
+
+
+<div class="cards-container">
+
+    <?php
+    while ($row = mysqli_fetch_assoc($result)) {
+        extract($row);
+    ?>
+    <a href="post.php?post_id=<?php echo $post_id; ?>">
+
+        <div class="card">
+            <img src="./images/<?php echo $post_image ?>" class="card-img-top" style="height: 200px; object-fit:cover"
+                alt="card img">
+            <div class="card-body box">
+                <?php
+                    if (strlen($post_title) > 60) {
+                        $trim_title = substr($post_title, 0, 60) . " ...";
+                    } else {
+                        $trim_title = $post_title;
+                    }
+                    ?>
+                <h4><?php echo $trim_title; ?></h4>
+
+                <?php
+                    if (strlen($post_content) > 100) {
+                        $trim_string = substr($post_content, 0, 100) . " ...";
+                    } else {
+                        $trim_string = $string;
+                    }
+                    ?>
+                <p><?php echo $trim_string ?></p>
+
+                <p class="c-footer"><?php echo $post_tags; ?></p>
+            </div>
         </div>
+    </a>
+
+    <?php }; ?>
+
+</div>
+
+<div class="pagination">
+    <button type="button"><i class="ri-arrow-left-s-line"></i></button>
+
+    <?php
+    for ($page = 1; $page <= $number_of_page; $page++) {
+    ?>
+    <a href="index.php?page=<?php echo $page ?>" class="page-num"><?php echo $page; ?></a>
+    <?php } ?>
+
+    <button type="button"><i class="ri-arrow-right-s-line"></i></button>
+</div>

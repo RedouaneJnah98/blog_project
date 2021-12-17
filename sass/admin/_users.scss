@@ -1,0 +1,15 @@
+@use "../components/" as *;
+
+.user-img-container {
+  img {
+    margin-right: 0.5rem;
+    width: 40px;
+    height: 40px;
+    border-radius: $radius;
+    object-fit: cover;
+  }
+
+  p {
+    display: inline;
+  }
+}

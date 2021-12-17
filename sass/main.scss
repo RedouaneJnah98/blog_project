@@ -3,6 +3,8 @@
 @use "./components/navbar";
 @use "./components/features";
 @use "./components/cards";
+@use "./components/post";
+@use "./components/comment";
 
 // Admin
 @use "./admin/login";
@@ -10,6 +12,11 @@
 @use "./admin/admin";
 @use "./admin/homeSection";
 @use "./admin/boxes";
+@use "./admin/comments";
+@use "./admin/posts";
+@use "./admin/add_post";
+@use "./admin/add_user";
+@use "./admin/users";
 
 body {
   font-size: 16px;

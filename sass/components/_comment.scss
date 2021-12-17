@@ -1,0 +1,100 @@
+@use "../components/" as *;
+
+.comment-section {
+  margin-top: 4rem;
+  margin-bottom: 2.5rem;
+  display: flex;
+
+  .user-comment-img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 1rem;
+  }
+
+  textarea {
+    background: $input-bcg;
+    border: none;
+    border-radius: $radius;
+    height: 150px;
+    width: 500px;
+    padding: 1rem;
+    font-size: 0.9rem;
+    outline: none !important;
+    border: 1px solid $p-clr;
+    resize: none;
+
+    &:focus {
+      border: 2px solid $p-clr;
+    }
+  }
+
+  form {
+    button {
+      background: $logo-clr;
+      color: $white-clr;
+      border-radius: 20px;
+      padding: 0.5rem 1.5rem;
+      margin-top: 1rem;
+      text-transform: capitalize;
+    }
+  }
+}
+
+.comments {
+  font-size: 1.2rem;
+  color: $main-clr;
+  font-weight: 600;
+}
+
+.display-comment {
+  margin-top: 1.5rem;
+}
+
+.comments,
+.reply {
+  img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    grid-area: 1 / 1 / 2 / 2;
+  }
+
+  h4 {
+    display: inline;
+    font-size: 1rem;
+    font-weight: 700;
+    color: $main-clr;
+    margin-left: 0.5rem;
+  }
+
+  p {
+    display: inline;
+    color: $fourth-clr;
+    font-weight: 400;
+  }
+}
+
+.comment-info {
+  margin-left: 2.7rem;
+  margin-top: -0.5rem;
+
+  button {
+    color: $fourth-clr;
+    font-weight: 400;
+    font-size: 0.9rem;
+  }
+
+  p {
+    display: inline;
+    color: $fourth-clr;
+    font-weight: 400;
+  }
+}
+
+.reply {
+  margin-left: 2.7rem;
+  margin-top: 1rem;
+}

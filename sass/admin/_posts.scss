@@ -1,0 +1,35 @@
+@use "../components/" as *;
+
+.table-container {
+  background: $white-clr;
+  padding: 2.5rem 1.5rem;
+  border-radius: $radius;
+
+  h2 {
+    color: $main-clr;
+    font-weight: 600;
+  }
+
+  table {
+    .p-title {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: $main-clr;
+      text-transform: capitalize;
+    }
+
+    th {
+      font-size: 1rem;
+      font-weight: 600;
+      color: $main-clr;
+      padding: 1rem 0;
+    }
+
+    td {
+      font-size: 0.85rem;
+      color: $admin-link-clr;
+      padding: 1rem 0;
+      text-transform: capitalize;
+    }
+  }
+}

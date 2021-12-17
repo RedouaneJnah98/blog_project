@@ -7,13 +7,17 @@
   left: 240px;
   transition: all 0.5s ease;
 
-  nav {
+  .fract {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  aside {
     height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    // width: calc(100% - 240px);
-    width: 100%;
 
     .sidebar-btn {
       display: flex;
@@ -100,20 +104,24 @@
         align-items: center;
       }
     }
+  }
+  .user {
+    h4 {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: $main-clr;
+      display: inline;
 
-    .user {
-      h4 {
-        font-size: 0.9rem;
-        font-weight: 700;
-        color: $main-clr;
+      span {
+        color: $admin-link-clr;
       }
+    }
 
-      .user-img {
-        width: 45px;
-        height: 45px;
-        border-radius: 50%;
-        object-fit: cover;
-      }
+    .user-img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      object-fit: cover;
     }
   }
 }

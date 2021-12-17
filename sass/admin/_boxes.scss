@@ -1,13 +1,20 @@
 @use "../components/" as *;
 
 .box-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr auto;
-  grid-gap: 1rem;
+  display: flex;
+  justify-content: space-between;
+  // flex-wrap: wrap;
+  gap: 1rem;
+
+  article {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 }
 
 .box-content {
-  width: 180px;
+  width: 170px;
   background: $white-clr;
   height: 100px;
   border-radius: $radius;
@@ -51,13 +58,13 @@
 .weather-box {
   width: 300px;
   background: $white-clr;
-  height: 250px;
+  height: 270px;
   border-radius: $radius;
-  padding: 1rem;
+  padding: 2rem 1rem;
 
   .ri-newspaper-line {
     font-size: 2.5rem;
-    color: $admin-link-clr;
+    color: $fourth-clr;
   }
 
   .weather-info {
@@ -73,33 +80,29 @@
     h6 {
       font-size: 0.8rem;
       font-weight: 300;
-      color: $admin-link-clr;
+      color: $fourth-clr;
     }
 
     a {
-      color: $logo-clr;
+      color: $five-clr;
       font-size: 0.85rem;
       font-weight: 400;
     }
   }
 
   .infos {
-    .weather-icon {
-      width: 50px;
-      height: 50px;
-    }
-
     h5 {
       font-size: 1rem;
       font-weight: 600;
-      counter-reset: $main-clr;
+      color: $main-clr;
     }
 
     .degree {
       font-size: 1.1rem;
+      color: $fourth-clr;
 
       &-c {
-        color: $admin-link-clr;
+        color: $main-clr;
         font-weight: 300;
         font-size: 0.95rem;
       }
@@ -108,7 +111,39 @@
     h6 {
       font-size: 0.9rem;
       font-weight: 300;
+      color: $fourth-clr;
+    }
+  }
+}
+
+// Blogger team
+.blogger-team {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  .title {
+    font-size: 1.75rem;
+    color: $main-clr;
+    font-weight: 600;
+
+    span {
       color: $admin-link-clr;
+      font-size: 1.1rem;
+      font-weight: normal;
+    }
+  }
+
+  .images {
+    display: flex;
+    gap: 0.8rem;
+
+    img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 50%;
     }
   }
 }

@@ -83,17 +83,6 @@ footer .footer-logo {
   position: relative;
   z-index: 2;
 }
-.home .hero-infos .hero-subtitle {
-  text-transform: uppercase;
-  font-size: 0.95rem;
-  border-left: 3px solid #fff;
-  color: #fff;
-  height: 2rem;
-  font-weight: 300;
-  padding-left: 1rem;
-  display: flex;
-  align-items: center;
-}
 .home .hero-infos .hero-title {
   font-size: 3rem;
   font-weight: 700;
@@ -112,6 +101,53 @@ footer .footer-logo {
   color: #fff;
   padding: 1rem 2rem;
   border-radius: 0.625rem;
+}
+
+.hero-infos {
+  position: relative;
+  z-index: 2;
+}
+.hero-infos .hero-subtitle {
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  border-left: 3px solid #fff;
+  color: #fff;
+  height: 2rem;
+  font-weight: 300;
+  padding-left: 1rem;
+  display: flex;
+  align-items: center;
+}
+.hero-infos .hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  color: #fff;
+}
+.hero-infos .hero-title .logo {
+  text-transform: uppercase;
+  color: #ff594f;
+}
+.hero-infos .scroll-btn {
+  text-decoration: none;
+  background: #ff594f;
+  text-transform: capitalize;
+  font-size: 0.95rem;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 0.625rem;
+}
+
+.hero-subtitle {
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  border-left: 3px solid #fff;
+  color: #fff;
+  height: 2rem;
+  font-weight: 300;
+  padding-left: 1rem;
+  display: flex;
+  align-items: center;
 }
 
 header {
@@ -138,7 +174,10 @@ header nav .user-icon {
   border-radius: 50%;
 }
 header nav .user-icon .user {
-  width: 25px;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .latest-articles-section {
@@ -220,11 +259,17 @@ main .infos-card .author-name {
     border-radius: 0.625rem 0 0 0.625rem;
   }
 }
+.cards-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
 .card {
   border-radius: 0.625rem;
-}
-.card .txt-content {
-  height: 150px;
+  max-width: 350px;
+  width: 100%;
 }
 .card .card-img-top {
   border-radius: 0.625rem 0.625rem 0 0;
@@ -246,6 +291,7 @@ main .infos-card .author-name {
   padding-left: 0.5rem;
   color: #7968a9;
   font-weight: bold;
+  text-transform: capitalize;
 }
 
 .box {
@@ -254,6 +300,244 @@ main .infos-card .author-name {
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+}
+
+.pagination {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
+}
+.pagination button {
+  border: 0.5px solid #1081e8;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #151443;
+}
+.pagination .page-num {
+  background-color: #1081e8;
+  padding: 0.25rem 0.7rem;
+  color: #fff;
+  border-radius: 5px;
+  margin: 0 0.5rem;
+}
+
+.post-header {
+  height: 60vh;
+}
+
+.post-hero::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 65vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+.post-hero .post-img {
+  position: absolute;
+  width: 100%;
+  height: 65vh;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+.post-hero .post-hero-infos {
+  position: relative;
+  z-index: 2;
+  margin-top: 12vh;
+}
+.post-hero .post-hero-infos .post-title {
+  font-size: 2.4rem;
+  color: #fff;
+  font-weight: 600;
+  text-transform: capitalize;
+  width: 750px;
+}
+
+.post-body {
+  padding: 4rem 0;
+}
+.post-body .flexbox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1.5rem;
+}
+.post-body .flexbox .author-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.post-body .flexbox .author p {
+  font-size: 1rem;
+  color: #616162;
+  display: inline;
+}
+.post-body .flexbox .author p span {
+  font-weight: 500;
+  color: #151443;
+}
+.post-body .flexbox .views {
+  margin-left: 2rem;
+}
+.post-body .flexbox .views p {
+  display: inline;
+  color: #616162;
+}
+.post-body .flexbox .post-date {
+  color: #616162;
+  display: inline;
+}
+.post-body article {
+  padding-top: 1rem;
+}
+.post-body article .post-title {
+  color: #616162;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+.post-body article p {
+  color: #616162;
+  font-weight: 300;
+  font-size: 0.95rem;
+  line-height: 2;
+  margin-bottom: 2rem;
+}
+.post-body article .post-img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.recommended {
+  margin-top: 3.5rem;
+  color: #151443;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+.recommended-articles-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+.recommended-articles-container .box {
+  max-width: 550px;
+  position: relative;
+  box-shadow: inset 0px -80px 80px rgba(0, 0, 0, 0.8);
+  border-radius: 0.625rem;
+}
+.recommended-articles-container .box img {
+  height: 300px;
+  object-fit: cover;
+  border-radius: 0.625rem;
+  position: relative;
+  z-index: -1;
+}
+.recommended-articles-container .box h3 {
+  position: absolute;
+  color: #fff;
+  bottom: 10%;
+  left: 5%;
+  text-transform: capitalize;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.comment-section {
+  margin-top: 4rem;
+  margin-bottom: 2.5rem;
+  display: flex;
+}
+.comment-section .user-comment-img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+.comment-section textarea {
+  background: #f3f3f3;
+  border: none;
+  border-radius: 0.625rem;
+  height: 150px;
+  width: 500px;
+  padding: 1rem;
+  font-size: 0.9rem;
+  outline: none !important;
+  border: 1px solid #e5e5e5;
+  resize: none;
+}
+.comment-section textarea:focus {
+  border: 2px solid #e5e5e5;
+}
+.comment-section form button {
+  background: #1081e8;
+  color: #fff;
+  border-radius: 20px;
+  padding: 0.5rem 1.5rem;
+  margin-top: 1rem;
+  text-transform: capitalize;
+}
+
+.comments {
+  font-size: 1.2rem;
+  color: #151443;
+  font-weight: 600;
+}
+
+.display-comment {
+  margin-top: 1.5rem;
+}
+
+.comments img,
+.reply img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  grid-area: 1/1/2/2;
+}
+.comments h4,
+.reply h4 {
+  display: inline;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #151443;
+  margin-left: 0.5rem;
+}
+.comments p,
+.reply p {
+  display: inline;
+  color: #616162;
+  font-weight: 400;
+}
+
+.comment-info {
+  margin-left: 2.7rem;
+  margin-top: -0.5rem;
+}
+.comment-info button {
+  color: #616162;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+.comment-info p {
+  display: inline;
+  color: #616162;
+  font-weight: 400;
+}
+
+.reply {
+  margin-left: 2.7rem;
+  margin-top: 1rem;
 }
 
 .login-img {
@@ -457,6 +741,10 @@ main .infos-card .author-name {
   left: 60px;
 }
 
+.chart {
+  position: relative;
+}
+
 .home-section {
   position: relative;
   min-height: 100vh;
@@ -464,36 +752,40 @@ main .infos-card .author-name {
   left: 240px;
   transition: all 0.5s ease;
 }
-.home-section nav {
+.home-section .fract {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.home-section aside {
   height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
 }
-.home-section nav .sidebar-btn {
+.home-section aside .sidebar-btn {
   display: flex;
   align-items: center;
   font-size: 1.2rem;
 }
-.home-section nav .sidebar-btn i {
+.home-section aside .sidebar-btn i {
   margin-right: 1rem;
   cursor: pointer;
 }
-.home-section nav .sidebar-btn i:hover {
+.home-section aside .sidebar-btn i:hover {
   color: #1081e8;
 }
-.home-section nav .sidebar-btn span {
+.home-section aside .sidebar-btn span {
   color: #151443;
   font-weight: 700;
 }
-.home-section nav .search-box {
+.home-section aside .search-box {
   position: relative;
   height: 40px;
   max-width: 600px;
   width: 100%;
 }
-.home-section nav .search-box input {
+.home-section aside .search-box input {
   width: 100%;
   height: 100%;
   border: none;
@@ -504,11 +796,11 @@ main .infos-card .author-name {
   padding: 0 0.8rem;
   color: #8790a1;
 }
-.home-section nav .search-box input::placeholder {
+.home-section aside .search-box input::placeholder {
   padding-left: 5px;
   border-left: 2.5px solid #1081e8;
 }
-.home-section nav .search-box .ri-search-2-line {
+.home-section aside .search-box .ri-search-2-line {
   position: absolute;
   height: 40px;
   width: 40px;
@@ -518,7 +810,7 @@ main .infos-card .author-name {
   line-height: 40px;
   color: #1081e8;
 }
-.home-section nav .notification {
+.home-section aside .notification {
   position: relative;
   width: 30px;
   height: 30px;
@@ -528,11 +820,11 @@ main .infos-card .author-name {
   align-items: center;
   justify-content: center;
 }
-.home-section nav .notification i {
+.home-section aside .notification i {
   color: #1081e8;
   font-size: 1.1rem;
 }
-.home-section nav .notification .message {
+.home-section aside .notification .message {
   position: absolute;
   background-color: red;
   width: 20px;
@@ -546,26 +838,35 @@ main .infos-card .author-name {
   justify-content: center;
   align-items: center;
 }
-.home-section nav .user h4 {
+.home-section .user h4 {
   font-size: 0.9rem;
-  font-weight: 700;
+  font-weight: 600;
   color: #151443;
+  display: inline;
 }
-.home-section nav .user .user-img {
-  width: 45px;
-  height: 45px;
+.home-section .user h4 span {
+  color: #8790a1;
+}
+.home-section .user .user-img {
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   object-fit: cover;
 }
 
 .box-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr auto;
-  grid-gap: 1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.box-container article {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .box-content {
-  width: 180px;
+  width: 170px;
   background: #fff;
   height: 100px;
   border-radius: 0.625rem;
@@ -604,13 +905,13 @@ main .infos-card .author-name {
 .weather-box {
   width: 300px;
   background: #fff;
-  height: 250px;
+  height: 270px;
   border-radius: 0.625rem;
-  padding: 1rem;
+  padding: 2rem 1rem;
 }
 .weather-box .ri-newspaper-line {
   font-size: 2.5rem;
-  color: #8790a1;
+  color: #616162;
 }
 .weather-box .weather-info {
   padding-top: 0.5rem;
@@ -624,34 +925,283 @@ main .infos-card .author-name {
 .weather-box .weather-info h6 {
   font-size: 0.8rem;
   font-weight: 300;
-  color: #8790a1;
+  color: #616162;
 }
 .weather-box .weather-info a {
-  color: #1081e8;
+  color: #1da1f2;
   font-size: 0.85rem;
   font-weight: 400;
-}
-.weather-box .infos .weather-icon {
-  width: 50px;
-  height: 50px;
 }
 .weather-box .infos h5 {
   font-size: 1rem;
   font-weight: 600;
-  counter-reset: #151443;
+  color: #151443;
 }
 .weather-box .infos .degree {
   font-size: 1.1rem;
+  color: #616162;
 }
 .weather-box .infos .degree-c {
-  color: #8790a1;
+  color: #151443;
   font-weight: 300;
   font-size: 0.95rem;
 }
 .weather-box .infos h6 {
   font-size: 0.9rem;
   font-weight: 300;
+  color: #616162;
+}
+
+.blogger-team {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.blogger-team .title {
+  font-size: 1.75rem;
+  color: #151443;
+  font-weight: 600;
+}
+.blogger-team .title span {
   color: #8790a1;
+  font-size: 1.1rem;
+  font-weight: normal;
+}
+.blogger-team .images {
+  display: flex;
+  gap: 0.8rem;
+}
+.blogger-team .images img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.admin-bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 4rem 0rem;
+}
+.admin-bottom .comments-container {
+  width: 300px;
+  background: #fff;
+  padding: 1.5rem 1rem;
+  border-radius: 0.625rem;
+}
+.admin-bottom .comments-container .comments-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+.admin-bottom .comments-container h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #151443;
+  margin-bottom: 2rem;
+}
+.admin-bottom .comments-container h4 {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #1081e8;
+  text-transform: capitalize;
+}
+.admin-bottom .comments-container h4 .commented {
+  font-weight: 300;
+  color: #8790a1;
+}
+.admin-bottom .comments-container p {
+  font-size: 0.75rem;
+  color: #616162;
+}
+.admin-bottom .comments-container .comments-img {
+  max-width: 50px;
+  width: 100%;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 0.625rem;
+}
+
+.table-container {
+  background: #fff;
+  padding: 2.5rem 1.5rem;
+  border-radius: 0.625rem;
+}
+.table-container h2 {
+  color: #151443;
+  font-weight: 600;
+}
+.table-container table .p-title {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #151443;
+  text-transform: capitalize;
+}
+.table-container table th {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #151443;
+  padding: 1rem 0;
+}
+.table-container table td {
+  font-size: 0.85rem;
+  color: #8790a1;
+  padding: 1rem 0;
+  text-transform: capitalize;
+}
+
+.add-post-container {
+  margin-top: 2.5rem;
+}
+.add-post-container div {
+  display: grid;
+  margin: 1.5rem 0;
+}
+.add-post-container div input[type=text] {
+  max-width: 600px;
+  width: 100%;
+  border: none;
+  background-color: #f3f3f3;
+  font-size: 0.9rem;
+  color: #8790a1;
+  font-weight: 300;
+  padding: 1rem;
+  outline: none;
+  border-radius: 0.625rem;
+}
+.add-post-container div input[type=file] {
+  font-size: 0.9rem;
+  color: #8790a1;
+}
+.add-post-container div label {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #151443;
+}
+.add-post-container div textarea {
+  border: none;
+  outline: none;
+  background: #f3f3f3;
+  border-radius: 0.625rem;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  color: #8790a1;
+}
+.add-post-container .post-status,
+.add-post-container .post-tag {
+  width: 200px;
+}
+.add-post-container .post-status select,
+.add-post-container .post-tag select {
+  background-color: #f3f3f3;
+  outline: none;
+  border: none;
+  padding: 1rem 0.5rem;
+  border-radius: 0.625rem;
+  font-size: 0.9rem;
+  color: #8790a1;
+}
+.add-post-container .post-status option:not(:checked),
+.add-post-container .post-tag option:not(:checked) {
+  color: #1da1f2;
+}
+
+.create-post-btn {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  background: #1da1f2;
+  padding: 0.7rem 1.5rem;
+  color: #fff;
+  border-radius: 30px;
+  text-transform: capitalize;
+}
+
+.img-user-container {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 2rem;
+}
+.img-user-container img {
+  width: 100%;
+  object-fit: cover;
+}
+.img-user-container label {
+  position: absolute;
+  right: 0;
+  bottom: 0.9rem;
+  background-color: #1081e8;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.img-user-container label i {
+  color: #fff;
+}
+.img-user-container input {
+  visibility: hidden;
+}
+
+.fields-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+.fields-container div {
+  display: grid;
+}
+.fields-container div label {
+  color: #151443;
+  font-weight: 600;
+}
+.fields-container div input {
+  margin-top: 0.5rem;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #8790a1;
+  font-weight: 300;
+  width: 400px;
+  height: 45px;
+  background: #f3f3f3;
+  border: none;
+  border-radius: 0.625rem;
+  outline: none;
+}
+.fields-container div select {
+  background: #f3f3f3;
+  width: 400px;
+  margin-top: 0.5rem;
+  border-radius: 0.625rem;
+  outline: none;
+  border: none;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #8790a1;
+}
+
+.add-user-btn {
+  background: #1081e8;
+  margin-top: 3rem;
+  width: 150px;
+  height: 50px;
+  border-radius: 0.625rem;
+  color: #fff;
+}
+
+.user-img-container img {
+  margin-right: 0.5rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 0.625rem;
+  object-fit: cover;
+}
+.user-img-container p {
+  display: inline;
 }
 
 body {
