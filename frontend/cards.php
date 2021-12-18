@@ -35,7 +35,7 @@ $result = mysqli_query($connect, $query);
     <a href="post.php?post_id=<?php echo $post_id; ?>">
 
         <div class="card">
-            <img src="./images/<?php echo $post_image ?>" class="card-img-top" style="height: 200px; object-fit:cover"
+            <img src="./imgs/<?php echo $post_image ?>" class="card-img-top" style="height: 200px; object-fit:cover"
                 alt="card img">
             <div class="card-body box">
                 <?php
