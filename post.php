@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
     </div>
 
     <section class="post-hero">
-        <img src="images/<?php echo $post_hero ?>" class="post-img" alt="">
+        <img src="imgs/<?php echo $post_hero ?>" class="post-img" alt="">
         <div class="post-hero-infos container">
             <h4 class="hero-subtitle"><?php echo $post_tags; ?></h4>
             <h1 class="post-title"><?php echo $post_title; ?></h1>
@@ -59,7 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
     <div class="flexbox">
         <div class="d-flex align-items-center">
             <div class="author">
-                <img src="images/<?php echo $row["image"]; ?>" class="author-img" alt="author image">
+                <img src="imgs/<?php echo $row["image"]; ?>" class="author-img" alt="author image">
                 <p class="ms-2">by <span><?php echo $name; ?></span></p>
             </div>
             <div class="views">
@@ -77,7 +77,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
     <article>
         <h2 class="post-title"><?php echo $row["post_subtitle"]; ?></h2>
         <p><?php echo $row["post_content"]; ?></p>
-        <img src="images/<?php echo $row["post_image"] ?>" class="post-img" alt="post image">
+        <img src="imgs/<?php echo $row["post_image"] ?>" class="post-img" alt="post image">
 
         <!-- Comment Section -->
         <div class="comment-section">
@@ -95,7 +95,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
                         $imgStmt .= "male.jpg";
                     }
                     ?>
-            <img src="images/<?php echo $imgStmt; ?>" class="user-comment-img" alt="admin image">
+            <img src="imgs/<?php echo $imgStmt; ?>" class="user-comment-img" alt="admin image">
 
             <form id="comment_form">
                 <div>
@@ -124,19 +124,19 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
 
     <div class="recommended-articles-container">
         <div class="box">
-            <img src="images/recommend-1.jpg" class="recommend-img" alt="post image">
+            <img src="imgs/recommend-1.jpg" class="recommend-img" alt="post image">
             <h3>could a reboot make social <br> media a nicer place?</h3>
         </div>
         <div class="box">
-            <img src="images/recommend-2.jpg" class="recommend-img" alt="post image">
+            <img src="imgs/recommend-2.jpg" class="recommend-img" alt="post image">
             <h3>fake walmart news release claimed <br> it would accept cryptocurrency</h3>
         </div>
         <div class="box">
-            <img src="images/recommend-3.jpg" class="recommend-img" alt="post image">
+            <img src="imgs/recommend-3.jpg" class="recommend-img" alt="post image">
             <h3>wales fly-half biggar on bolt, fregie <br> and solskjaer's doubters</h3>
         </div>
         <div class="box">
-            <img src="images/recommend-4.jpg" class="recommend-img" alt="post image">
+            <img src="imgs/recommend-4.jpg" class="recommend-img" alt="post image">
             <h3>tennis' 'most awkward champion & the <br> true power of her voice</h3>
         </div>
     </div>

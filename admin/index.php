@@ -37,7 +37,7 @@ if (!isset($_SESSION["username"])) {
                     extract($row);
                 ?>
                 <div class="comments-info">
-                    <img src="../images/<?php echo $image ?>" class="comments-img" alt="user">
+                    <img src="../imgs/<?php echo $image ?>" class="comments-img" alt="user">
                     <div>
                         <h4 class="user-comment"><?php echo $username; ?> <span class="commented">has
                                 commented</span></h4>

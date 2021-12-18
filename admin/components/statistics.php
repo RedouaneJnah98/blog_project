@@ -53,7 +53,7 @@
                 while ($row = mysqli_fetch_assoc($fetchData)) {
                     extract($row);
                 ?>
-                <img src="../images/<?php echo $image ?>" alt="admin image">
+                <img src="../imgs/<?php echo $image ?>" alt="admin image">
                 <?php } ?>
             </div>
         </div>

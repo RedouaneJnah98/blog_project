@@ -3,15 +3,13 @@ include "components/adminHeader.php";
 session_start();
 
 // delete user
-if (isset($_SERVER["REQUEST_METHOD"]) === "GET") {
-    $user_id = $_REQUEST["delete_user"];
-    $sql = "DELETE FROM user WHERE id = $user_id";
-    $send_query = mysqli_query($connect, $sql);
+if ($_SERVER["REQUEST_METHOD"] === "GET") {
+    if (isset($_REQUEST["delete_user"])) {
 
-    if ($send_query) {
-        echo "user deleted succefully";
-    } else {
-        echo "Eroor" . mysqli_error($connect);
+        $uId = $_REQUEST["delete_user"];
+
+        $users_sql = "DELETE FROM user WHERE id = $uId";
+        $send_query = mysqli_query($connect, $users_sql);
     }
 }
 
