@@ -2,7 +2,7 @@
 
 <nav class="d-flex justify-content-between mt-4">
     <a href="index.php">
-        <img src="./images/logo.svg" class="logo-icon" alt="logo icon">
+        <img src="./imgs/logo.svg" class="logo-icon" alt="logo icon">
     </a>
     <div class="links-container">
         <ul class="d-flex">
@@ -29,7 +29,7 @@
 
                     $imgCondition = (isset($_SESSION["username"])) ? $img["image"] : "icon-user.svg";
                     ?>
-                    <img src="./images/<?php echo $imgCondition ?>" class="user" alt="user image">
+                    <img src="./imgs/<?php echo $imgCondition ?>" class="user" alt="user image">
                 </div>
                 <li class="ms-5 login">
                     <a href="./admin/login.php">

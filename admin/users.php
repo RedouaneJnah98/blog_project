@@ -2,6 +2,19 @@
 include "components/adminHeader.php";
 session_start();
 
+// delete user
+if (isset($_SERVER["REQUEST_METHOD"]) === "GET") {
+    $user_id = $_REQUEST["delete_user"];
+    $sql = "DELETE FROM user WHERE id = $user_id";
+    $send_query = mysqli_query($connect, $sql);
+
+    if ($send_query) {
+        echo "user deleted succefully";
+    } else {
+        echo "Eroor" . mysqli_error($connect);
+    }
+}
+
 // define total number of results you want per page
 $results_per_page = 9;
 
@@ -75,7 +88,7 @@ if (!isset($_SESSION["username"])) {
                             <td><?php echo $userRole; ?></td>
                             <td>
                                 <i class="ri-delete-bin-6-fill"></i>
-                                <a href="users.php?action=delete">delete</a>
+                                <a href="users.php?delete_user=<?php echo $id ?>">delete</a>
                             </td>
                         </tr>
                     </tbody>

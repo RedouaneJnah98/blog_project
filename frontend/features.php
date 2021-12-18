@@ -1,7 +1,7 @@
 <div class="d-flex justify-content-between flex-wrap my-5 gap-3">
     <div class="header-card">
         <main>
-            <img src="./images/img-1.jpg" class="card-img" alt="tech-image">
+            <img src="./imgs/img-1.jpg" class="card-img" alt="tech-image">
             <div class="infos-card">
                 <h3 class="mb-2">5 Tips for how to create <br>Powerful Media</h3>
                 <p>The firm added: "Our goal remains to prevent anyone who seeks to exploit others from having a home on
@@ -21,7 +21,7 @@
     <div class="card vertical-card" style="max-width: 550px">
         <div class="row g-0 align-items-center">
             <div class="col-md-5">
-                <img src="./images/img-2.jpg" class="vertical-img" alt="astro image">
+                <img src="./imgs/img-2.jpg" class="vertical-img" alt="astro image">
             </div>
             <div class="col-md-7">
                 <div class="card-body">

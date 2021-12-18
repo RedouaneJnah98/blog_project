@@ -29,6 +29,6 @@
 
         echo "<h4 class='me-3'>Good {$term}, <span>{$subUname}</span></h4>";
         ?>
-        <img src="../images/<?php echo $row["image"]; ?>" class="user-img" alt="user image">
+        <img src="../imgs/<?php echo $row["image"]; ?>" class="user-img" alt="user image">
     </div>
 </div>

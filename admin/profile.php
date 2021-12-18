@@ -26,7 +26,7 @@ if (!isset($_SESSION["username"])) {
                         extract($row);
                     ?>
                 <div class="img-user-container">
-                    <img src="../images/<?php echo $image ?>" alt="user image">
+                    <img src="../imgs/<?php echo $image ?>" alt="user image">
                     <label for="user_img"><i class="ri-pencil-line"></i></label>
                     <input type="file" id="user_img" name="user_img" required>
                 </div>
@@ -76,7 +76,7 @@ if (!isset($_SESSION["username"])) {
                 </div>
 
                 <?php } ?>
-                <button type="submit" name="add_user" class="add-user-btn">Add User</button>
+                <button type="submit" name="add_user" class="add-user-btn">Update</button>
             </form>
         </article>
     </div>

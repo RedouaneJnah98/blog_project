@@ -2,7 +2,7 @@
     <div class="logo-container">
         <i class='bx bxl-slack-old'></i>
         <a href="../index.php">
-            <img src="../images/logo.svg" class="logo-sidebar" alt="">
+            <img src="../imgs/logo.svg" class="logo-sidebar" alt="">
         </a>
     </div>
     <ul class="nav-links">

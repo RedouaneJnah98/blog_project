@@ -11,7 +11,7 @@
 
         <section class="home">
             <div>
-                <img src="./images/bcg.jpg" class="img" alt="">
+                <img src="./imgs/bcg.jpg" class="img" alt="">
             </div>
             <div class="hero-infos">
                 <h4 class="hero-subtitle">read the latest articles</h4>
