@@ -67,7 +67,7 @@ if (!isset($_SESSION["username"])) {
                             </th>
                             <td scope="row"><?php echo $id; ?></td>
                             <td class="user-img-container ">
-                                <img src="../images/<?php echo $image ?>" class="user-img" alt="user image">
+                                <img src="../imgs/<?php echo $image ?>" class="user-img" alt="user image">
                                 <p class="p-title"><?php echo "$firstname $lastname"; ?> </p>
                             </td>
                             <td><?php echo $email; ?></td>

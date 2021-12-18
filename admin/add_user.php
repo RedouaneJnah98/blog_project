@@ -1,7 +1,6 @@
 <?php
 include "components/adminHeader.php";
 include "utils/functions.php";
-// session_start();
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $firstname = $_REQUEST["first_name"];
@@ -13,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $userImg = $_FILES["user_img"]["name"];
     $userTmpName = $_FILES["user_img"]["tmp_name"];
 
-    $user_img_dir = "../images/$userImg";
+    $user_img_dir = "../imgs/$userImg";
     $datetime = date("Y-m-d H:i:s");
     $hashPwd = password_hash($userPwd, PASSWORD_DEFAULT);
     $hashCPwd = password_hash($CUserPwd, PASSWORD_DEFAULT);
@@ -42,16 +41,16 @@ if (!isset($_SESSION["username"])) {
 <?php include "./components/sidebar.php"; ?>
 
 <section class="container-fluid">
-    <div class="home-section p-3">
+    <div class="home-section px-3">
         <?php include "./components/homeHeader.php"; ?>
 
-        <div class="table-container">
+        <article class="table-container">
             <h1>Add User</h1>
-            <form action="<?php echo $_SERVER["PHP_SELF"] ?>" method="POST" enctype="multipart/form-data">
+            <form action="" method="POST" enctype="multipart/form-data">
                 <div class="img-user-container">
-                    <img src="../images/user.svg" alt="user image">
-                    <label for="user_img"><i class="ri-pencil-line"></i></label>
-                    <input type="file" id="user_img" name="user_img" required>
+                    <img src="../images/user.svg" id="preview-img" alt="user image">
+                    <label for="uploadfile"><i class="ri-pencil-line"></i></label>
+                    <input type="file" id="uploadfile" name="user_img" required>
                 </div>
                 <div class="fields-container">
                     <div>
@@ -89,12 +88,23 @@ if (!isset($_SESSION["username"])) {
                 </div>
                 <button type="submit" name="add_user" class="add-user-btn">Add User</button>
             </form>
-        </div>
+        </article>
     </div>
 </section>
 
 
 <?php } ?>
 
-
 <?php include "components/adminFooter.php"; ?>
+
+<script>
+$(document).ready(function() {
+    $("#uploadfile").change(function(event) {
+        var x = URL.createObjectURL(event.target.files[0]);
+        console.log($('#preview-img').attr("src", x));
+
+        $('#preview-img').attr("src", x);
+    })
+
+})
+</script>

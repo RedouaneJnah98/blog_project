@@ -4,13 +4,6 @@ session_start();
 
 $userName = $_SESSION["username"];
 
-// $user_query = "SELECT id FROM user WHERE username = '{$userName}'";
-// $getQuery = mysqli_query($connect, $user_query);
-
-// $userId = mysqli_fetch_assoc($getQuery);
-
-// echo $_SESSION["userId"];
-
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $post_title = $_REQUEST["post_title"];
     $post_subtitle = $_REQUEST["post_subtitle"];
@@ -22,8 +15,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $post_img_tmp = $_FILES["post_img"]["tmp_name"];
     $post_content = mysqli_real_escape_string($connect, $_REQUEST["post_content"]);
 
-    $hero_dir = "../images/$post_hero";
-    $img_dir = "../images/$post_image";
+    $hero_dir = "../imgs/$post_hero";
+    $img_dir = "../imgs/$post_image";
 
     move_uploaded_file($post_hero_tmp, $hero_dir);
     move_uploaded_file($post_img_tmp, $img_dir);
@@ -69,7 +62,6 @@ if (!isset($_SESSION["username"])) {
                 </div>
                 <div class="post-status">
                     <label for="post_status">Post Status</label>
-                    <!-- <input type="text" name="post_status"> -->
                     <select name="post_status">
                         <option value="published">Choose a status</option>
                         <option value="published">published</option>
@@ -95,7 +87,6 @@ if (!isset($_SESSION["username"])) {
                 </div>
                 <div>
                     <label for="post_content">Post Content</label>
-                    <!-- <textarea name="post_content" cols="30" rows="10"></textarea> -->
                     <textarea id="htmeditor" name="post_content" cols="30" rows="10"></textarea>
                 </div>
 
