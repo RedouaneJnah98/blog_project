@@ -2,6 +2,27 @@
 include "components/adminHeader.php";
 session_start();
 
+// if ($_SERVER["REQUEST_METHOD"] === "POST") {
+//     if (isset($_REQUEST["update_user"])) {
+//         $user_img = $_REQUEST["user_img"];
+//         $firstname = $_REQUEST["firstname"];
+//         $lastname = $_REQUEST["lastname"];
+//         $role = $_REQUEST["role"];
+//         $username = $_REQUEST["username"];
+//         $email = $_REQUEST["user_email"];
+//         $user_pwd = $_REQUEST["user_password"];
+//         $user_c_pwd = $_REQUEST["confirm_user_password"];
+
+//         echo "yess";
+//     }
+// }
+
+if (isset($_POST["update_user"])) {
+    echo $_POST["firstname"];
+} else {
+    echo "noo";
+}
+
 if (!isset($_SESSION["username"])) {
     header("Location: login.php");
 } else {
@@ -26,18 +47,18 @@ if (!isset($_SESSION["username"])) {
                         extract($row);
                     ?>
                 <div class="img-user-container">
-                    <img src="../imgs/<?php echo $image ?>" alt="user image">
-                    <label for="user_img"><i class="ri-pencil-line"></i></label>
-                    <input type="file" id="user_img" name="user_img" required>
+                    <img src="../imgs/<?php echo $image ?>" id="prev_img" alt="user image">
+                    <label for="upload_img"><i class="ri-pencil-line"></i></label>
+                    <input type="file" id="upload_img" name="user_img" required>
                 </div>
                 <div class="fields-container">
                     <div>
                         <label for="">First Name</label>
-                        <input type="text" name="first_name" value="<?php echo $firstname ?>" required>
+                        <input type="text" name="firstname" value="<?php echo $firstname ?>" required>
                     </div>
                     <div>
                         <label for="">Last Name</label>
-                        <input type="text" name="last_name" value="<?php echo $lastname ?>" required>
+                        <input type="text" name="lastname" value="<?php echo $lastname ?>" required>
                     </div>
                 </div>
                 <div class="fields-container">
@@ -76,7 +97,7 @@ if (!isset($_SESSION["username"])) {
                 </div>
 
                 <?php } ?>
-                <button type="submit" name="add_user" class="add-user-btn">Update</button>
+                <button type="submit" name="update_user" class="add-user-btn">Update</button>
             </form>
         </article>
     </div>
@@ -86,3 +107,12 @@ if (!isset($_SESSION["username"])) {
     include "components/adminFooter.php";
 }
 ?>
+
+<script>
+$(function() {
+    $("#upload_img").change(function(event) {
+        var x = URL.createObjectURL(event.target.files[0]);
+        $("#prev_img").attr("src", x);
+    })
+})
+</script>

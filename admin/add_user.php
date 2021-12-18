@@ -101,7 +101,6 @@ if (!isset($_SESSION["username"])) {
 $(document).ready(function() {
     $("#uploadfile").change(function(event) {
         var x = URL.createObjectURL(event.target.files[0]);
-        console.log($('#preview-img').attr("src", x));
 
         $('#preview-img').attr("src", x);
     })

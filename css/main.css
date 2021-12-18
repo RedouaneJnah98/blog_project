@@ -968,15 +968,32 @@ main .infos-card .author-name {
   font-size: 1.1rem;
   font-weight: normal;
 }
-.blogger-team .images {
+
+.avatars {
   display: flex;
-  gap: 0.8rem;
 }
-.blogger-team .images img {
+.avatars img {
   width: 60px;
   height: 60px;
-  object-fit: cover;
   border-radius: 50%;
+  object-fit: cover;
+}
+
+.avatars__item {
+  /* Nagative margin make avatar overlap to previous one */
+  margin-left: -4px;
+}
+
+.avatars__image {
+  /* Add a white curve between avatars */
+  width: 60px;
+  box-shadow: 0 0 0 4px #fff;
+  /* Center the content */
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  /* Rounded border */
+  border-radius: 9999px;
 }
 
 .admin-bottom {

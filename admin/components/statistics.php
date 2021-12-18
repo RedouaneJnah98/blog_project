@@ -3,7 +3,7 @@
 
         <div class="box-content">
             <div class="icon-cont">
-                <img src="../images/assets/users.png" alt="">
+                <img src="../imgs/assets/users.png" alt="">
             </div>
             <div class="content">
                 <h4>14.200</h4>
@@ -12,7 +12,7 @@
         </div>
         <div class="box-content">
             <div class="icon-cont">
-                <img src="../images/assets/post.png" alt="">
+                <img src="../imgs/assets/post.png" alt="">
             </div>
             <div class="content">
                 <h4>150</h4>
@@ -21,7 +21,7 @@
         </div>
         <div class="box-content">
             <div class="icon-cont">
-                <img src="../images/assets/likes.png" alt="">
+                <img src="../imgs/assets/likes.png" alt="">
             </div>
             <div class="content">
                 <h4>140k</h4>
@@ -30,7 +30,7 @@
         </div>
         <div class="box-content">
             <div class="icon-cont">
-                <img src="../images/assets/comments.png" alt="">
+                <img src="../imgs/assets/comments.png" alt="">
             </div>
             <div class="content">
                 <h4>100k</h4>
@@ -46,16 +46,25 @@
             $result_rows = mysqli_num_rows($fetchData);
             ?>
             <h2 class="title">Blogger Admins <br><span><?php echo $result_rows; ?> Admins</span></h2>
-            <div class="images">
+            <!-- <div class="images"> -->
 
+
+            <div class="avatars">
                 <?php
-
                 while ($row = mysqli_fetch_assoc($fetchData)) {
                     extract($row);
                 ?>
-                <img src="../imgs/<?php echo $image ?>" alt="admin image">
+
+                <!-- Avatar item -->
+                <div class="avatars__item">
+                    <div class="avatars__image">
+                        <img src="../imgs/<?php echo $image ?>" alt="admin image">
+                    </div>
+                </div>
                 <?php } ?>
             </div>
+
+            <!-- </div> -->
         </div>
 
     </article>
