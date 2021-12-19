@@ -11,7 +11,7 @@ if (isset($_POST["comment_load_data"])) {
         extract($row);
 ?>
 <div class="comments">
-    <img src="images/<?php echo $image ?>" class="img" alt="user image">
+    <img src="imgs/<?php echo $image ?>" class="img" alt="user image">
     <h4><?php echo "$firstname $lastname"; ?></h4>
     <p><?php echo $content; ?></p>
 </div>
@@ -30,7 +30,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 ?>
 
 <div class="comments">
-    <img src="images/<?php echo $image ?>" class="img" alt="user image">
+    <img src="imgs/<?php echo $image ?>" class="img" alt="user image">
     <h4><?php echo "$firstname $lastname"; ?></h4>
     <p><?php echo $content; ?></p>
 </div>

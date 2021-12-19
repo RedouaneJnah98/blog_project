@@ -7,13 +7,13 @@ include "utils/functions.php";
 
 <section class="d-flex flex-wrap">
     <div>
-        <img src="../images/signup-img.jpg" class="signup-img" alt="signup image">
+        <img src="../imgs/signup-img.jpg" class="signup-img" alt="signup image">
     </div>
 
     <article class="ms-5 form-infos">
         <div class="d-flex justify-content-between align-items-center">
             <a href="../index.php">
-                <img src="../images/blue-logo.svg" class="black-logo" alt="">
+                <img src="../imgs/blue-logo.svg" class="black-logo" alt="">
             </a>
             <button type="button" class="close-btn"><i class="ri-close-line"></i></button>
         </div>

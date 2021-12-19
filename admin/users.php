@@ -48,6 +48,25 @@ if (!isset($_SESSION["username"])) {
 
         <?php include "components/homeHeader.php"; ?>
 
+        <!-- Modal -->
+        <div class="modal fade" id="userModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Delete User</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Are you sure you want to delete this user?
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+                        <a href='' class="btn btn-danger modal-delete-user">Delete</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <article class="table-container">
             <h2>All Users</h2>
 
@@ -86,7 +105,7 @@ if (!isset($_SESSION["username"])) {
                             <td><?php echo $userRole; ?></td>
                             <td>
                                 <i class="ri-delete-bin-6-fill"></i>
-                                <a href="users.php?delete_user=<?php echo $id ?>">delete</a>
+                                <a href="javascript:void(0)" rel="<?php echo $id ?>" class="delete-user">delete</a>
                             </td>
                         </tr>
                     </tbody>
@@ -129,6 +148,16 @@ $(document).ready(function() {
                 this.checked = false;
             })
         }
+    })
+
+    // show modal
+    $(".delete-user").on("click", function() {
+        var id = $(this).attr("rel");
+        var url = "users.php?delete_user=" + id + " ";
+        console.log(url);
+
+        $(".modal-delete-user").attr('href', url);
+        $("#userModal").modal("show");
     })
 })
 </script>
