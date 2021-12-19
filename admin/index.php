@@ -1,5 +1,6 @@
 <?php
 include "./components/adminHeader.php";
+
 if (!isset($_SESSION)) {
     session_start();
 }
@@ -51,5 +52,50 @@ if (!isset($_SESSION["username"])) {
         </div>
     </article>
 
+
 </section>
 <?php include "./components/adminFooter.php"; ?>
+
+<script>
+const ctx = document.getElementById("myChart").getContext("2d");
+
+let delayed;
+
+// Gradient Fill
+let gradient = ctx.createLinearGradient(0, 0, 0, 400);
+gradient.addColorStop(0, "rgba(58,123,213,1)");
+gradient.addColorStop(1, "rgba(0,210,255,0.3)");
+
+const labels = ["Users", "Posts", "Likes", "Comments"];
+
+const data = {
+    labels,
+    datasets: [{
+        data: [<?php echo $users_count; ?>, <?php echo $posts_count ?>, 5, <?php echo $comment_count ?>],
+        label: "Blogger Activity",
+        borderWidth: 2,
+        borderRadius: 5,
+        borderSkipped: false,
+        backgroundColor: "#1da1f2",
+    }, ],
+};
+
+const config = {
+    type: "bar",
+    data: data,
+    options: {
+        responsive: true,
+        plugins: {
+            legend: {
+                position: "top",
+            },
+            title: {
+                display: true,
+                text: "Blogger Activity Bar Chart",
+            },
+        },
+    },
+};
+
+const myChart = new Chart(ctx, config);
+</script>

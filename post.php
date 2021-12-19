@@ -1,8 +1,20 @@
 <?php include "frontend/head.php"; ?>
 
 <?php
+
 if ($_SERVER["REQUEST_METHOD"] === "GET") {
     $postId = $_REQUEST["post_id"];
+
+    // post views
+    if (isset($_REQUEST["post_id"])) {
+
+        $post_views = "UPDATE posts SET post_views = post_views + 1 WHERE post_id = {$postId}";
+        $post_views_query = mysqli_query($connect, $post_views);
+
+        if (!$post_views_query) {
+            echo "Error" . mysqli_error($connect);
+        }
+    }
 
     $sql = "SELECT * FROM posts WHERE post_id = $postId";
     $getPosts = mysqli_query($connect, $sql);
@@ -64,7 +76,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
             </div>
             <div class="views">
                 <img src="images/eye-fill.svg" alt="icon">
-                <p>10K views</p>
+                <p><?php echo $post_views; ?> views</p>
             </div>
         </div>
         <div>

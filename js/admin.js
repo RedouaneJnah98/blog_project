@@ -1,13 +1,13 @@
 const infos = document.querySelector(".infos");
 
-// const API_KEY = process.env.API_KEY
+const API_KEY = process.env.API_KEY;
 
 function success(position) {
   let crd = position.coords;
   let { latitude, longitude } = crd;
 
   fetch(
-    `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly,minutely&units=metric&appid=${api}`
+    `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly,minutely&units=metric&appid=${process.env.API_KEY}`
   )
     .then((resp) => resp.json())
     .then((data) => {
