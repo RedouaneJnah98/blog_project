@@ -17,13 +17,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $email = $_REQUEST["user_email"];
         $user_pwd = $_REQUEST["user_password"];
         $user_c_pwd = $_REQUEST["confirm_user_password"];
+        $country = $_REQUEST["country"];
 
         move_uploaded_file($user_img_tmp, "../imgs/$user_img");
 
         $hashPwd = password_hash($user_pwd, PASSWORD_DEFAULT);
         $hashCPwd = password_hash($user_c_pwd, PASSWORD_DEFAULT);
 
-        $user_query = "UPDATE user SET firstname = '$firstname', lastname = '$lastname', username = '$username', userRole = '$role', email = '$email', password = '$hashPwd', cPassword = '$hashCPwd', image = '$user_img' WHERE id = $userId";
+        $user_query = "UPDATE user SET firstname = '$firstname', lastname = '$lastname', username = '$username', userRole = '$role', email = '$email', password = '$hashPwd', cPassword = '$hashCPwd', country = '$country', image = '$user_img' WHERE id = $userId";
         $update_user_info = mysqli_query($connect, $user_query);
     }
 }
@@ -80,7 +81,9 @@ if (!isset($_SESSION["username"])) {
                 <div class="fields-container">
                     <div>
                         <label for="">Country</label>
-                        <input type="text" value="<?php echo $country ?>">
+                        <select name="country" id="countries">
+                            <option value="select"><?php echo $country; ?></option>
+                        </select>
                     </div>
                     <div>
                         <label for="">Email</label>
@@ -115,6 +118,17 @@ $(function() {
     $("#upload_img").change(function(event) {
         var x = URL.createObjectURL(event.target.files[0]);
         $("#prev_img").attr("src", x);
+    })
+
+    $.ajax({
+        url: "https://countriesnow.space/api/v0.1/countries/",
+        method: "GET",
+        success: function(data) {
+            $.data.forEach(element => {
+                $("#countries").append('<option name=' + country + '>' + element +
+                    '</option>');
+            });
+        }
     })
 })
 </script>

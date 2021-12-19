@@ -1,6 +1,15 @@
 <?php
+if (!isset($_SESSION)) {
+    session_start();
+}
 
-session_start();
+
+function checkStatus($table, $conn)
+{
+    $sql = "SELECT * FROM $table";
+    $result = mysqli_query($conn, $sql);
+    return mysqli_num_rows($result);
+}
 
 function emptyInputSignup($firstname, $lastname, $emailAddress, $password, $confirmPassword, $country)
 {

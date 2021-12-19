@@ -1009,7 +1009,6 @@ main .infos-card .author-name {
 }
 .admin-bottom .comments-container .comments-info {
   display: flex;
-  justify-content: space-between;
   gap: 0.5rem;
 }
 .admin-bottom .comments-container h2 {
@@ -1019,7 +1018,7 @@ main .infos-card .author-name {
   margin-bottom: 2rem;
 }
 .admin-bottom .comments-container h4 {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 700;
   color: #1081e8;
   text-transform: capitalize;

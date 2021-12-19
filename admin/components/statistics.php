@@ -1,3 +1,12 @@
+<?php
+include "./utils/functions.php";
+
+$comment_count = checkStatus("comment", $connect);
+$users_count = checkStatus("user", $connect);
+$posts_count = checkStatus("posts", $connect);
+
+?>
+
 <div class="box-container">
     <article class="col-8">
 
@@ -6,7 +15,7 @@
                 <img src="../imgs/assets/users.png" alt="">
             </div>
             <div class="content">
-                <h4>14.200</h4>
+                <h4><?php echo $users_count; ?></h4>
                 <p>Users</p>
             </div>
         </div>
@@ -15,7 +24,7 @@
                 <img src="../imgs/assets/post.png" alt="">
             </div>
             <div class="content">
-                <h4>150</h4>
+                <h4><?php echo $posts_count; ?></h4>
                 <p>Post</p>
             </div>
         </div>
@@ -33,7 +42,7 @@
                 <img src="../imgs/assets/comments.png" alt="">
             </div>
             <div class="content">
-                <h4>100k</h4>
+                <h4><?php echo $comment_count; ?></h4>
                 <p>Comments</p>
             </div>
         </div>

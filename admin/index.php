@@ -1,6 +1,8 @@
 <?php
 include "./components/adminHeader.php";
-session_start();
+if (!isset($_SESSION)) {
+    session_start();
+}
 
 if (!isset($_SESSION["username"])) {
     header("Location: login.php");
@@ -39,7 +41,7 @@ if (!isset($_SESSION["username"])) {
                 <div class="comments-info">
                     <img src="../imgs/<?php echo $image ?>" class="comments-img" alt="user">
                     <div>
-                        <h4 class="user-comment"><?php echo $username; ?> <span class="commented">has
+                        <h4 class="user-comment"><?php echo $username; ?>... <span class="commented">has
                                 commented</span></h4>
                         <p><?php echo substr($content, 0, 50); ?>...</p>
                     </div>
