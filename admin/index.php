@@ -71,7 +71,9 @@ const labels = ["Users", "Posts", "Likes", "Comments"];
 const data = {
     labels,
     datasets: [{
-        data: [<?php echo $users_count; ?>, <?php echo $posts_count ?>, 5, <?php echo $comment_count ?>],
+        data: [<?php echo $users_count; ?>, <?php echo $posts_count ?>, <?php echo $likes_count; ?>,
+            <?php echo $comment_count ?>
+        ],
         label: "Blogger Activity",
         borderWidth: 2,
         borderRadius: 5,

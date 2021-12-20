@@ -451,6 +451,34 @@ main .infos-card .author-name {
   font-size: 1.5rem;
 }
 
+.post-like {
+  display: flex;
+  align-items: center;
+}
+.post-like .like-icon {
+  font-size: 1.5rem;
+  margin-right: 1.5rem;
+  color: #ff594f;
+  cursor: pointer;
+}
+.post-like .like-icon:hover {
+  color: #fa392e;
+}
+.post-like h3 {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+.post-like h3 span {
+  font-size: 1.1rem;
+  color: #616162;
+  font-weight: 400;
+  margin-right: 0.35rem;
+}
+.post-like h3 i {
+  color: #8790a1;
+}
+
 .comment-section {
   margin-top: 4rem;
   margin-bottom: 2.5rem;

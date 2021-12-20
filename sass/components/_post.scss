@@ -151,3 +151,36 @@
     }
   }
 }
+
+.post-like {
+  display: flex;
+  align-items: center;
+
+  .like-icon {
+    font-size: 1.5rem;
+    margin-right: 1.5rem;
+    color: $second-clr;
+    cursor: pointer;
+
+    &:hover {
+      color: $second-clr-dark;
+    }
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+
+    span {
+      font-size: 1.1rem;
+      color: $fourth-clr;
+      font-weight: 400;
+      margin-right: 0.35rem;
+    }
+
+    i {
+      color: $admin-link-clr;
+    }
+  }
+}

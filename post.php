@@ -2,6 +2,16 @@
 
 <?php
 
+if (isset($_GET["post_id"], $_GET["user_id"])) {
+    $post_id = $_GET["post_id"];
+    $user_id = $_GET["user_id"];
+
+    $sql = "INSERT INTO likes (post_id, user_id) VALUES ($post_id, $user_id) LIMIT 1";
+    $send_sql = mysqli_query($connect, $sql);
+
+    header("Location: post.php?post_id=$post_id");
+}
+
 if ($_SERVER["REQUEST_METHOD"] === "GET") {
     $postId = $_REQUEST["post_id"];
 
@@ -16,6 +26,11 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
         }
     }
 
+    // post likes
+    $likes_query = "SELECT * FROM likes WHERE post_id = $postId";
+    $result = mysqli_query($connect, $likes_query);
+    $likes_count = mysqli_num_rows($result);
+
     $sql = "SELECT * FROM posts WHERE post_id = $postId";
     $getPosts = mysqli_query($connect, $sql);
 
@@ -28,6 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
 
     while ($row = mysqli_fetch_assoc($getPosts)) {
         extract($row);
+
 ?>
 
 <header class="post-header">
@@ -75,7 +91,7 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
                 <p class="ms-2">by <span><?php echo $name; ?></span></p>
             </div>
             <div class="views">
-                <img src="images/eye-fill.svg" alt="icon">
+                <img src="imgs/eye-fill.svg" alt="icon">
                 <p><?php echo $post_views; ?> views</p>
             </div>
         </div>
@@ -118,7 +134,13 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
             </form>
         </div>
 
-        <h3 class="comments"><?php echo $num_of_comments; ?> comments</h3>
+        <div class="post-like">
+
+            <h3><?php echo $likes_count; ?> <a
+                    href="post.php?post_id=<?php echo $post_id ?>&user_id=<?php echo $_SESSION["userId"] ?>"><i
+                        class="ri-heart-add-fill like-icon"></i> </a> </h3>
+            <h3 class="comments"> <span><?php echo $num_of_comments; ?></span> <i class="ri-chat-1-fill"></i></h3>
+        </div>
 
         <main class="display-comment">
 

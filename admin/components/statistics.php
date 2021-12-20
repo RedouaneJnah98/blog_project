@@ -4,6 +4,7 @@ include "./utils/functions.php";
 $comment_count = checkStatus("comment", $connect);
 $users_count = checkStatus("user", $connect);
 $posts_count = checkStatus("posts", $connect);
+$likes_count = checkStatus("likes", $connect);
 
 ?>
 
@@ -33,7 +34,7 @@ $posts_count = checkStatus("posts", $connect);
                 <img src="../imgs/assets/likes.png" alt="">
             </div>
             <div class="content">
-                <h4>140k</h4>
+                <h4><?php echo $likes_count; ?></h4>
                 <p>Likes</p>
             </div>
         </div>
