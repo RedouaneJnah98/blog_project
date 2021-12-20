@@ -136,9 +136,8 @@ if ($_SERVER["REQUEST_METHOD"] === "GET") {
 
         <div class="post-like">
 
-            <h3><?php echo $likes_count; ?> <a
-                    href="post.php?post_id=<?php echo $post_id ?>&user_id=<?php echo $_SESSION["userId"] ?>"><i
-                        class="ri-heart-add-fill like-icon"></i> </a> </h3>
+            <h3><a href="post.php?post_id=<?php echo $post_id ?>&user_id=<?php echo $_SESSION["userId"] ?>"><?php echo $likes_count; ?>
+                </a> <i class="ri-heart-add-fill like-icon"></i></h3>
             <h3 class="comments"> <span><?php echo $num_of_comments; ?></span> <i class="ri-chat-1-fill"></i></h3>
         </div>
 

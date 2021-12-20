@@ -469,7 +469,8 @@ main .infos-card .author-name {
   display: flex;
   align-items: center;
 }
-.post-like h3 span {
+.post-like h3 span,
+.post-like h3 a {
   font-size: 1.1rem;
   color: #616162;
   font-weight: 400;
